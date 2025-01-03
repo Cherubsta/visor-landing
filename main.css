@@ -84,6 +84,7 @@ a:hover {
     text-align: center;
     padding: 80px 20px;
     background-color: #F5F9E9;
+    max-width: 100%; /* Ensure the section doesn't exceed viewport width */
 }
 
 .hero-section h1 {
@@ -124,7 +125,7 @@ a:hover {
 
 /* Hero Images */
 .hero-images {
-/*    display: flex;*/
+    display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
@@ -142,13 +143,13 @@ a:hover {
 }
 
 .main-image {
-    width: 420px;
+    width: 390px;
     height: auto;
     border-radius: 10px;
 }
 
 .flanked-image {
-    width: 370px;
+    width: 365px;
     height: auto;
     border-radius: 10px;
     transform: translateY(30px); /* Slightly offset below the center image */
@@ -177,7 +178,7 @@ a:hover {
 .text-box.right {
     left: 115px;
     transform: rotate(8deg);
-    top: -18px;
+    top: -34px;
 }
 
 .features-section {
@@ -192,6 +193,16 @@ a:hover {
     margin-bottom: 20px;
 }
 
+.features-section a {
+    color: #FF6B6B !important; /* Override Bootstrap default (blue links) */
+    text-decoration: none; /* Remove underline */
+}
+
+.features-section a:hover {
+    text-decoration: underline; /* Add underline */
+    text-decoration-color: #FF6B6B; /* Accent color for underline */
+}
+
 .feature-card {
     background: #ffffff;
     border-radius: 12px;
@@ -200,7 +211,7 @@ a:hover {
 }
 
 .horizontal-section {
-    padding: 40px 20px;
+/*    padding: 40px 20px;*/
     text-align: center;
 }
 
@@ -256,35 +267,56 @@ a:hover {
     filter: none; /* Ensure normal state icons display as intended */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero-images {
-        flex-direction: column; /* Stack images vertically */
-    }
+/* Testimonials Section */
 
-    .image-wrapper {
-        margin-bottom: 20px; /* Add spacing between stacked images */
-    }
-
-    .flanked-image {
-        transform: none; /* Remove offset for stacked layout */
-    }
+.testimonials-section {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 60px 20px;
 }
 
-/* Navbar adjustments for smaller screens */
-@media (max-width: 991.98px) { /* Bootstrap's breakpoint for 'lg' screens */
-    .navbar .cta-btn-small {
-        display: block; /* Ensure the button is visible */
-        margin: 0 auto; /* Center the button */
-        margin-top: 10px; /* Add some spacing */
-        text-align: center; /* Center-align the text */
-    }
+.testimonials-section h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #333; /* Darker for contrast */
+    margin-bottom: 40px;
+}
 
-    .navbar-toggler {
-        position: absolute; /* Move the toggler to a fixed position */
-        top: 10px; /* Adjust vertical positioning */
-        right: 10px; /* Align to the right */
-    }
+.testimonial-card {
+    background-color: white; /* Card background */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px;
+    text-align: center; /* Center-align content */
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slightly deeper shadow */
+}
+
+.testimonial-img {
+    border-radius: 50%; /* Circular profile pictures */
+    width: 100px; /* Consistent size */
+    height: 100px;
+    object-fit: cover; /* Crop images to fit */
+    margin: 0 auto;
+}
+
+.testimonial-card h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.testimonial-card p {
+    font-size: 1rem;
+    color: #6c757d; /* Muted text color */
+}
+
+.testimonial-card .text-muted {
+    font-size: 0.9rem;
+    color: #adb5bd; /* Lighter text for roles */
 }
 
 /* Footer */
@@ -301,14 +333,18 @@ a:hover {
     color: #333; /* Darker text for section headers */
 }
 
+/* Footer Links */
 .footer .footer-link {
-    color: #FF6B6B; /* Accent color for links */
-    text-decoration: none; /* No underline */
-    display: block; /* Ensure left alignment */
+    color: #FF6B6B; /* Accent color */
+    text-decoration: none; /* No underline by default */
+    background-color: transparent !important; /* Ensure no background */
 }
 
+/* Footer Links Hover */
 .footer .footer-link:hover {
-    text-decoration: underline; /* Underline on hover for better UX */
+    text-decoration: underline; /* Add underline on hover */
+    text-decoration-color: #FF6B6B; /* Accent color for underline */
+    background-color: transparent !important; /* Remove background on hover */
 }
 
 .footer .footer-icon img {
@@ -322,8 +358,44 @@ a:hover {
     filter: none; /* Restore original color on hover */
 }
 
-/* Additional Alignment for Columns */
 .footer .col-md-3 ul {
     text-align: left; /* Align column items to the left */
     padding: 0; /* Remove padding for a clean look */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-images {
+        flex-direction: column; /* Stack images vertically */
+    }
+
+    .image-wrapper {
+        margin-bottom: 20px; /* Add spacing between stacked images */
+    }
+
+    .flanked-image {
+        transform: none; /* Remove offset for stacked layout */
+    }
+}
+
+@media (max-width: 991.98px) { /* Bootstrap's breakpoint for 'lg' screens */
+    .navbar .cta-btn-small {
+        display: block; /* Ensure the button is visible */
+        margin: 0 auto; /* Center the button */
+        margin-top: 10px; /* Add some spacing */
+        text-align: center; /* Center-align the text */
+    }
+
+    .navbar-toggler {
+        position: absolute; /* Move the toggler to a fixed position */
+        top: 10px; /* Adjust vertical positioning */
+        right: 10px; /* Align to the right */
+    }
+}
+
+/* Adjust .main-image width for mobile */
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .main-image {
+        width: 365px; /* Match flanked-image width */
+    }
 }
