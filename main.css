@@ -1,0 +1,252 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #595959; /* Set default text color */
+}
+
+/* Global link styles */
+a {
+    color: #FF6B6B; /* Accent color */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    background-color: #FF5252; /* Slightly darker accent color */
+    text-decoration: none;
+}
+
+/* Specific styles for navbar links */
+.navbar .nav-link {
+    margin: 0 15px; /* Add horizontal spacing */
+    color: inherit !important; /* Keep the original color */
+    text-decoration: none; /* No underline by default */
+}
+
+.navbar .nav-link:hover {
+    color: inherit !important; /* Keep the original color */
+    background-color: transparent !important; /* No background change */
+    text-decoration: underline; /* Add underline on hover */
+    text-decoration-color: #FF6B6B; /* Red underline */
+}
+
+/* Specific styles for .navbar-brand to override global link styles */
+.navbar .navbar-brand {
+    color: inherit !important; /* Keep the original color */
+    text-decoration: none !important; /* No underline */
+}
+
+.navbar .navbar-brand:hover {
+    color: inherit !important; /* Prevent color change */
+    background-color: transparent !important; /* No background change */
+    text-decoration: none !important; /* No underline */
+}
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar .cta-btn-small {
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 20px;
+    background-color: #FF6B6B;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar .cta-btn-small:hover {
+    background-color: #FF5252;
+}
+
+.nav-link {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 8px 12px;
+}
+.app-name {
+    color: #595959; /* Vibrant red */
+    font-weight: bold; /* Optional: Make it bold */
+    font-size: 1.2rem; /* Optional: Adjust size for prominence */
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #F5F9E9;
+}
+
+.hero-section h1 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #6c757d;
+}
+.hero-paragraph {
+    max-width: 800px; /* Restrict the width for readability */
+    margin: 0 auto; /* Center the paragraph */
+    text-align: center; /* Center-align the text */
+    line-height: 1.6; /* Improve readability */
+    font-size: 1.2rem; /* Ensure it's easily legible */
+    color: #6c757d; /* Subtle gray color for better contrast */
+    padding-bottom: 20px;
+}
+
+.cta-btn {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 40px;
+    background-color: #FF6B6B;
+    color: white;
+    text-decoration: none;
+}
+
+.cta-btn:hover {
+    background-color: #FF5252;
+}
+
+/* Hero Images */
+.hero-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 80px; /* Add larger space above the hero images */
+    position: relative;
+}
+
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.main-image {
+    width: 420px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.flanked-image {
+    width: 370px;
+    height: auto;
+    border-radius: 10px;
+    transform: translateY(30px); /* Slightly offset below the center image */
+}
+
+.text-box {
+    position: absolute;
+    top: -50px; /* Position above the image */
+    left: 50%;
+    transform: translateX(-50%) rotate(-3deg);
+    width: 150px;
+    padding: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-box.left {
+    left: 102px;
+    transform: rotate(-5deg);
+    top: -42px;
+}
+
+.text-box.right {
+    left: 115px;
+    transform: rotate(8deg);
+    top: -18px;
+}
+
+.features-section {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.features-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.feature-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.horizontal-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.horizontal-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+.trusted-by {
+    font-size: 0.8rem; /* Smaller font size */
+    color: #6c757d; /* Optional: Muted gray color for a footer-like look */
+    text-align: center; /* Optional: Ensure it's centered */
+    padding-bottom: 20px; /* Adjust spacing if needed */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-images {
+        flex-direction: column; /* Stack images vertically */
+    }
+
+    .image-wrapper {
+        margin-bottom: 20px; /* Add spacing between stacked images */
+    }
+
+    .flanked-image {
+        transform: none; /* Remove offset for stacked layout */
+    }
+}
+
+/* Navbar adjustments for smaller screens */
+@media (max-width: 991.98px) { /* Bootstrap's breakpoint for 'lg' screens */
+    .navbar .cta-btn-small {
+        display: block; /* Ensure the button is visible */
+        margin: 0 auto; /* Center the button */
+        margin-top: 10px; /* Add some spacing */
+        text-align: center; /* Center-align the text */
+    }
+
+    .navbar-toggler {
+        position: absolute; /* Move the toggler to a fixed position */
+        top: 10px; /* Adjust vertical positioning */
+        right: 10px; /* Align to the right */
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
