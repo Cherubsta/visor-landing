@@ -1,8 +1,11 @@
+/*main.css*/
+
 body {
     font-family: 'Nunito', sans-serif;
     margin: 0;
     padding: 0;
     color: #595959; /* Set default text color */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Global link styles */
@@ -81,6 +84,7 @@ a:hover {
     text-align: center;
     padding: 80px 20px;
     background-color: #F5F9E9;
+    max-width: 100%; /* Ensure the section doesn't exceed viewport width */
 }
 
 .hero-section h1 {
@@ -121,12 +125,17 @@ a:hover {
 
 /* Hero Images */
 .hero-images {
-    display: flex;
+/*    display: flex;*/
     justify-content: center;
     align-items: center;
     gap: 30px;
     margin-top: 80px; /* Add larger space above the hero images */
     position: relative;
+
+    max-width: 100%; /* Ensure images never exceed the container width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove inline spacing */
+
 }
 
 .image-wrapper {
@@ -212,6 +221,43 @@ a:hover {
     padding-bottom: 20px; /* Adjust spacing if needed */
 }
 
+.pill-item {
+    display: inline-flex; /* Flex for better alignment of image and text */
+    align-items: center; /* Vertically align image and text */
+    background-color: white; /* White background */
+    color: #FF6B6B; /* Accent color */
+    border: 1px solid #FF6B6B; /* Green border */
+    border-radius: 30px; /* Pill shape */
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    white-space: nowrap;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+}
+
+.pill-icon {
+    height: 20px; /* Set consistent height */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 8px; /* Space between icon and text */
+    transition: all 0.2s ease-in-out;
+}
+
+.pill-item:hover {
+    background-color: #FF6B6B; /* Accent color on hover */
+    color: white; /* Text color changes to white */
+}
+
+.pill-item:hover .pill-icon {
+    filter: brightness(0) invert(1); /* Change PNG to white if it's black or colored */
+}
+
+/* Normal icon state */
+.pill-icon.normal {
+    filter: none; /* Ensure normal state icons display as intended */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-images {
@@ -244,9 +290,42 @@ a:hover {
 }
 
 /* Footer */
-footer {
-    background-color: #343a40;
-    color: #ffffff;
-    text-align: center;
-    padding: 20px 0;
+.footer {
+    background-color: #F5F5F5; /* Light gray background */
+    color: #6c757d; /* Subtle gray text */
+    font-size: 0.9rem; /* Slightly smaller text for footer links */
+    border-top: 1px solid #ddd; /* Subtle top border for separation */
+}
+
+.footer h5 {
+    font-size: 1.1rem; /* Slightly larger font for section titles */
+    margin-bottom: 1rem; /* Add spacing below titles */
+    color: #333; /* Darker text for section headers */
+}
+
+.footer .footer-link {
+    color: #FF6B6B; /* Accent color for links */
+    text-decoration: none; /* No underline */
+    display: block; /* Ensure left alignment */
+}
+
+.footer .footer-link:hover {
+    text-decoration: underline; /* Underline on hover for better UX */
+}
+
+.footer .footer-icon img {
+    height: 24px; /* Uniform size for social icons */
+    width: auto; /* Maintain aspect ratio */
+    filter: grayscale(100%); /* Make icons grayscale */
+    transition: all 0.3s ease-in-out;
+}
+
+.footer .footer-icon img:hover {
+    filter: none; /* Restore original color on hover */
+}
+
+/* Additional Alignment for Columns */
+.footer .col-md-3 ul {
+    text-align: left; /* Align column items to the left */
+    padding: 0; /* Remove padding for a clean look */
 }
