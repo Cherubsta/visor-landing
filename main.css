@@ -149,7 +149,7 @@ a:hover {
 }
 
 .flanked-image {
-    width: 365px;
+    width: 355px;
     height: auto;
     border-radius: 10px;
     transform: translateY(30px); /* Slightly offset below the center image */
@@ -157,7 +157,7 @@ a:hover {
 
 .text-box {
     position: absolute;
-    top: -50px; /* Position above the image */
+    top: -36px; /* Position above the image */
     left: 50%;
     transform: translateX(-50%) rotate(-3deg);
     width: 150px;
@@ -176,7 +176,7 @@ a:hover {
 }
 
 .text-box.right {
-    left: 115px;
+    left: 100px;
     transform: rotate(8deg);
     top: -34px;
 }
@@ -396,6 +396,6 @@ a:hover {
 /* Adjust .main-image width for mobile */
 @media (max-width: 768px) { /* Adjust breakpoint as needed */
     .main-image {
-        width: 365px; /* Match flanked-image width */
+        width: 355px; /* Match flanked-image width */
     }
 }
