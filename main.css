@@ -82,7 +82,7 @@ a:hover {
 /* Hero Section */
 .hero-section {
     text-align: center;
-    padding: 80px 20px;
+    padding: 60px 20px;
     background-color: #F5F9E9;
     max-width: 100%; /* Ensure the section doesn't exceed viewport width */
 }
@@ -129,7 +129,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    margin-top: 80px; /* Add larger space above the hero images */
+    margin-top: 40px; /* Add larger space above the hero images */
     position: relative;
     max-width: 100%; /* Ensure images never exceed the container width */
     height: auto; /* Maintain aspect ratio */
@@ -227,7 +227,6 @@ a:hover {
     font-size: 0.8rem; /* Smaller font size */
     color: #6c757d; /* Optional: Muted gray color for a footer-like look */
     text-align: center; /* Optional: Ensure it's centered */
-    padding-bottom: 20px; /* Adjust spacing if needed */
 }
 
 .pill-item {
