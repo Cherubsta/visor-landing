@@ -129,12 +129,11 @@ a:hover {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    margin-top: 40px; /* Add larger space above the hero images */
     position: relative;
     max-width: 100%; /* Ensure images never exceed the container width */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Remove inline spacing */
-
+    padding-top: 20px;
 }
 
 .image-wrapper {
@@ -172,7 +171,7 @@ a:hover {
 .text-box.left {
     left: 102px;
     transform: rotate(-5deg);
-    top: -42px;
+    top: -74px;
 }
 
 .text-box.right {
