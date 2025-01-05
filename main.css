@@ -16,7 +16,12 @@ a {
 
 a:hover {
     background-color: #FF5252; /* Slightly darker accent color */
-    text-decoration: none;
+    text-decoration: underline;
+    background-color: transparent !important; /* No background change */
+}
+
+p {
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.05); /* Extremely subtle shadow */
 }
 
 /* Specific styles for navbar links */
@@ -28,7 +33,6 @@ a:hover {
 
 .navbar .nav-link:hover {
     color: inherit !important; /* Keep the original color */
-    background-color: transparent !important; /* No background change */
     text-decoration: underline; /* Add underline on hover */
     text-decoration-color: #FF6B6B; /* Red underline */
 }
@@ -61,7 +65,6 @@ a:hover {
     border-radius: 20px;
     background-color: #FF6B6B;
     color: white;
-    text-decoration: none;
 }
 
 .navbar .cta-btn-small:hover {
@@ -116,7 +119,6 @@ a:hover {
     border-radius: 40px;
     background-color: #FF6B6B;
     color: white;
-    text-decoration: none;
 }
 
 .cta-btn:hover {
@@ -205,12 +207,6 @@ a:hover {
 
 .features-section a {
     color: #FF6B6B !important; /* Override Bootstrap default (blue links) */
-    text-decoration: none; /* Remove underline */
-}
-
-.features-section a:hover {
-    text-decoration: underline; /* Add underline */
-    text-decoration-color: #FF6B6B; /* Accent color for underline */
 }
 
 .feature-card {
@@ -228,7 +224,6 @@ a:hover {
 }
 
 .horizontal-section {
-/*    padding: 40px 20px;*/
     text-align: center;
 }
 
@@ -288,16 +283,6 @@ a:hover {
 .graybackground-section {
     background-color: #f8f9fa; /* Light gray background */
     padding: 60px 20px;
-}
-
-.graybackground-section a {
-    color: #FF6B6B !important; /* Override Bootstrap default (blue links) */
-    text-decoration: none; /* Remove underline */
-}
-
-.graybackground-section a:hover {
-    text-decoration: underline; /* Add underline */
-    text-decoration-color: #FF6B6B; /* Accent color for underline */
 }
 
 .graybackground-section h2 {
@@ -376,19 +361,6 @@ a:hover {
 }
 
 /* Footer Links */
-.footer .footer-link {
-    color: #FF6B6B; /* Accent color */
-    text-decoration: none; /* No underline by default */
-    background-color: transparent !important; /* Ensure no background */
-}
-
-/* Footer Links Hover */
-.footer .footer-link:hover {
-    text-decoration: underline; /* Add underline on hover */
-    text-decoration-color: #FF6B6B; /* Accent color for underline */
-    background-color: transparent !important; /* Remove background on hover */
-}
-
 .footer .footer-icon img {
     height: 24px; /* Uniform size for social icons */
     width: auto; /* Maintain aspect ratio */
