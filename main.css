@@ -220,7 +220,7 @@ a:hover {
     padding: 20px;
 }
 
-.categories-section h2 {
+.whitebackground-section h2 {
     font-size: 2.2rem;
     font-weight: bold;
     margin-bottom: 20px;
@@ -285,28 +285,28 @@ a:hover {
 
 /* Testimonials Section */
 
-.testimonials-section {
+.graybackground-section {
     background-color: #f8f9fa; /* Light gray background */
     padding: 60px 20px;
 }
 
-.testimonials-section a {
+.graybackground-section a {
     color: #FF6B6B !important; /* Override Bootstrap default (blue links) */
     text-decoration: none; /* Remove underline */
 }
 
-.testimonials-section a:hover {
+.graybackground-section a:hover {
     text-decoration: underline; /* Add underline */
     text-decoration-color: #FF6B6B; /* Accent color for underline */
 }
 
-.testimonials-section h2 {
+.graybackground-section h2 {
     font-size: 2.2rem;
     font-weight: bold;
     margin-bottom: 40px;
 }
 
-.testimonials-card {
+.graybackground-card {
     background-color: white; /* Card background */
     border-radius: 12px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
@@ -315,12 +315,12 @@ a:hover {
     transition: transform 0.3s ease-in-out; /* Smooth hover effect */
 }
 
-.testimonials-card:hover {
+.graybackground-card:hover {
     transform: translateY(-5px); /* Slight lift on hover */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slightly deeper shadow */
 }
 
-.testimonials-img {
+.graybackground-img {
     border-radius: 50%; /* Circular profile pictures */
     width: 100px; /* Consistent size */
     height: 100px;
@@ -328,27 +328,35 @@ a:hover {
     margin: 0 auto;
 }
 
-.testimonials-card h5 {
+.graybackground-card h5 {
     font-size: 1.2rem;
     font-weight: bold;
     margin-top: 15px;
 }
 
-.testimonials-card p {
+.graybackground-card p {
     font-size: 1rem;
     color: #6c757d; /* Muted text color */
 }
 
-.testimonials-card .text-muted {
+.graybackground-card .text-muted {
     font-size: 0.9rem;
     color: #adb5bd; /* Lighter text for roles */
 }
 
 .alt-image {
-    width: 180px;
+    width: 220px;
     height: auto;
     border-radius: 10px;
     margin-bottom: 40px;
+}
+
+.blurred-image {
+    width: 100%;
+    height: auto;
+    filter: blur(8px);
+    opacity: 0.3; /* Optional: Soften it slightly */
+    border-radius: 10px; /* Optional: Rounded corners for a clean look */
 }
 
 /* Footer */

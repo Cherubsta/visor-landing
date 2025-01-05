@@ -26,8 +26,7 @@
             text-decoration: none; /* Remove underline */
         }
         a:hover {
-            background-color: #FF5252; /* Slightly darker accent color */
-            text-decoration: none;
+            text-decoration: underline;
         }
 
         .navbar {
@@ -37,7 +36,13 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             z-index: 1000;
         }
-        
+
+        .navbar .navbar-brand:hover {
+            color: inherit !important; /* Keep the original color */
+            background-color: transparent !important; /* No background change */
+            text-decoration: none;
+        }
+
         .terms-header {
             background-color: #F5F9E9;
             padding: 50px 20px;
@@ -95,11 +100,12 @@
     </style>
 </head>
 <body>
+    
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <!-- Left-aligned brand -->
-            <a class="navbar-brand d-flex align-items-center" href="#">
+            <a class="navbar-brand d-flex align-items-center" href="https://gotvisor.com">
                 <img src="assets/logo.png" alt="visor Logo" class="me-2" style="height: 40px;">
                 <span class="app-name">visor</span>
             </a>
