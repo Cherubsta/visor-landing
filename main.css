@@ -341,7 +341,7 @@ p {
 .blurred-image {
     width: 100%;
     height: auto;
-    filter: blur(6px);
+    filter: blur(5px);
     opacity: 0.3; /* Optional: Soften it slightly */
     border-radius: 10px; /* Optional: Rounded corners for a clean look */
     -webkit-filter: blur(5px); /* For older Safari compatibility */
