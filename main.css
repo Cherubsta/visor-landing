@@ -87,7 +87,7 @@ p {
 .hero-section {
     text-align: center;
     padding: 60px 20px;
-    background-color: #F5F9E9;
+    background-color: #F5F9E9; /* Green */
     max-width: 100%; /* Ensure the section doesn't exceed viewport width */
 }
 
@@ -248,7 +248,7 @@ p {
     align-items: center; /* Vertically align image and text */
     background-color: white; /* White background */
     color: #FF6B6B; /* Accent color */
-    border: 1px solid #FF6B6B; /* Green border */
+    border: 1px solid #FF6B6B; 
     border-radius: 30px; /* Pill shape */
     padding: 10px 20px;
     font-size: 1rem;
@@ -362,6 +362,18 @@ p {
     gap: 0.1rem; /* Small gap between letters */
     justify-content: center; /* Center the word */
     align-items: center;
+}
+
+/* FAQ - Change accordion selected item's background color */
+.accordion-button:not(.collapsed) {
+    background-color: #F5F9E9; /* Accent color with 0.3 opacity */
+    color: inherit; /* Ensure text color remains readable */
+    border-color: #F5F9E9; /* Optional: Match border color to background */
+}
+
+/* Optional: Change border color of collapsed state for consistency */
+.accordion-button {
+    border-color: rgba(255, 107, 107, 0.3); /* Match border to accent color */
 }
 
 /* Footer */
