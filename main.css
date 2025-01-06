@@ -167,14 +167,14 @@ p {
     padding: 10px;
     font-size: 0.9rem;
     text-align: center;
-    background: white;
+    background: #FFF3B0;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .text-box.left {
     left: 102px;
-    transform: rotate(-5deg);
+    transform: rotate(-6deg);
     top: -74px;
 }
 
