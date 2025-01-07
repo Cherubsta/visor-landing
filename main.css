@@ -183,13 +183,9 @@ p {
     transform: rotate(8deg);
     top: -34px;
 }
-.checkbox {
-    font-size: 1.5rem;
-    vertical-align: top;
-    line-height: .8;
-    font-family: Arial, sans-serif; /* Forces a non-emoji font */
-    unicode-bidi: isolate; /* Treat the text as a standalone Unicode glyph */
-    font-feature-settings: "liga" 0; /* Disable font ligatures, which may render as emojis */
+.checked {
+    width: 1em; 
+    height: auto;
 }
 
 .how-section {
