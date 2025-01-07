@@ -199,34 +199,11 @@ p {
     margin-bottom: 20px;
 }
 
-.features-section {
-    background-color: #f8f9fa;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.features-section h2 {
-    font-size: 2.2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.features-section a {
-    color: #FF6B6B !important; /* Override Bootstrap default (blue links) */
-}
-
 .feature-card {
     background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-}
-
-.whitebackground-section h2 {
-    font-size: 2.2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-
 }
 
 .horizontal-section {
@@ -284,7 +261,13 @@ p {
     filter: none; /* Ensure normal state icons display as intended */
 }
 
-/* Testimonials Section */
+/* Background Sections */
+
+.whitebackground-section h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 
 .graybackground-section {
     background-color: #f8f9fa; /* Light gray background */
