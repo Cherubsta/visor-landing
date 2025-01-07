@@ -186,7 +186,8 @@ p {
 .checkbox {
     font-size: 1.5rem;
     vertical-align: top;
-    line-height: .9;
+    line-height: .8;
+    font-family: Arial, sans-serif; /* Forces a non-emoji font */
 }
 
 .how-section {
