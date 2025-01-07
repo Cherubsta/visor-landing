@@ -183,6 +183,11 @@ p {
     transform: rotate(8deg);
     top: -34px;
 }
+.checkbox {
+    font-size: 1.5rem;
+    vertical-align: top;
+    line-height: .9;
+}
 
 .how-section {
     padding: 60px 20px;
