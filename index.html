@@ -301,5 +301,37 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script> // To animate text-box
+      // Wait for the DOM to load
+      document.addEventListener("DOMContentLoaded", () => {
+        const leftBox   = document.querySelector(".text-box.left");
+        const centerBox = document.querySelector(".hero-images .text-box:not(.left):not(.right)"); 
+        const rightBox  = document.querySelector(".text-box.right");
+
+        window.addEventListener("scroll", () => {
+          // How far down you’ve scrolled
+          const scrollPos = window.scrollY || window.pageYOffset;
+
+          // Example transformations (experiment with the values below!)
+          // “Windy” swirl for the left box
+          leftBox.style.transform = `
+            translateY(${scrollPos * 0.005}px) 
+            rotate(${scrollPos * 0.02}deg)
+          `;
+          
+          // // Slight side-to-side for center box
+          // centerBox.style.transform = `
+          //   translateY(${scrollPos * 0.006}px)
+          //   rotate(${Math.cos(scrollPos * 0.01)}deg)
+          // `;
+
+          // Heavier drift for the right box
+          rightBox.style.transform = `
+            translateY(${scrollPos * 0.025}px)
+            rotate(${scrollPos * -0.03}deg)
+          `;
+        });
+      });
+    </script>
 </body>
 </html>
