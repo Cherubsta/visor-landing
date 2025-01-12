@@ -273,6 +273,13 @@
 
     <!-- Footer -->
     <div id="footer-container"></div>
+    <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script> // To animate text-box
@@ -305,14 +312,6 @@
             rotate(${scrollPos * -0.03}deg)
           `;
         });
-      });
-    </script>
-
-    <script>
-    fetch('footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('footer-container').innerHTML = data;
       });
     </script>
 </body>
