@@ -338,7 +338,17 @@ p {
 }
 
 .early-sketch {
-    opacity: 0.4; /* Optional: Soften it slightly */
+  /* Mask the edges so they fade away (not a true blur) */
+  -webkit-mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
 .rounded {
