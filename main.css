@@ -177,13 +177,13 @@ p {
 .text-box.left {
     left: 102px;
     transform: rotate(-6deg);
-    top: -74px;
+    top: -20px;
 }
 
 .text-box.right {
     left: 100px;
     transform: rotate(8deg);
-    top: -34px;
+    top: -74px;
 }
 .checked {
     width: 1em; 
