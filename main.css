@@ -25,7 +25,7 @@ p {
 }
 
 .content-wrapper {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -455,4 +455,18 @@ p {
     .main-image {
         width: 355px; /* Match flanked-image width */
     }
+}
+
+@media (max-width: 576px) {
+  .row.g-4 {
+    --bs-gutter-x: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .content-wrapper {
+    max-width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
 }
