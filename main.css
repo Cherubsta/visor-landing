@@ -24,6 +24,13 @@ p {
     text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.05); /* Extremely subtle shadow */
 }
 
+.content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 /* Specific styles for navbar links */
 .navbar .nav-link {
     margin: 0 15px; /* Add horizontal spacing */
