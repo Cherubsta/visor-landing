@@ -88,6 +88,7 @@ p {
     color: #595959; /* Vibrant red */
     font-weight: bold; /* Optional: Make it bold */
     font-size: 1.2rem; /* Optional: Adjust size for prominence */
+    padding-bottom: 6px;
 }
 
 /* Hero Section */
