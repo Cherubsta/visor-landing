@@ -121,6 +121,10 @@ p {
     padding-bottom: 20px;
 }
 
+.graybackground-card p {
+    color: #B3B3B3 !important;
+}
+
 .cta-btn {
     font-size: 1.2rem;
     font-weight: bold;
