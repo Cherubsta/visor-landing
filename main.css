@@ -343,7 +343,7 @@ p {
     width: 100%;
     height: auto;
     filter: blur(5px);
-    opacity: 0.3; /* Optional: Soften it slightly */
+    opacity: 0.6; /* Optional: Soften it slightly */
     border-radius: 10px; /* Optional: Rounded corners for a clean look */
     -webkit-filter: blur(5px); /* For older Safari compatibility */
     transition: all 0.3s ease-in-out; /* Smooth transition */
