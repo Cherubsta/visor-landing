@@ -92,7 +92,7 @@ p {
 }
 
 .hero-section p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #6c757d;
 }
 
@@ -108,7 +108,7 @@ p {
 }
 
 .hero-subtitle {
-  padding-inline: 30px;
+  /*padding-inline: 30px;*/
 }
 
 .last-paragraph {
@@ -169,6 +169,7 @@ p {
   }
 
   .hero-paragraph {
+    font-size: 1.5rem !important;
     padding-top: 12px;
     padding-bottom: 16px;
     padding-inline: 8px;
@@ -489,6 +490,12 @@ p {
     border-radius: 10px;
     margin-bottom: 40px;
 }
+
+.stars { 
+  color:#FFD166; letter-spacing:2px; 
+}
+
+.rating { margin:0; }   
 
 /* blurred bg helper */
 .blurred-image {
