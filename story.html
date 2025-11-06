@@ -14,35 +14,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
     <link rel="icon" href="assets/favicon.ico" sizes="32x32" type="image/x-icon">
+    <style>
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .navbar .navbar-brand:hover {
+            color: inherit !important; /* Keep the original color */
+            background-color: transparent !important; /* No background change */
+            text-decoration: none;
+        }
+        .thename {
+            padding-inline: 60px;
+            font-size: 1.2rem;
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="/index">
+            <!-- Left-aligned brand -->
+            <a class="navbar-brand d-flex align-items-center" href="https://gotvisor.com">
                 <img src="assets/logo.webp?v=1" alt="Visor Logo" style="height: 40px;">
                 <span class="app-name">visor</span>
             </a>
-            <button class="navbar-toggler ms-auto d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="/#features">How it works</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://apps.apple.com/app/id6744246412">Download</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#">Story</a></li>
-                </ul>
-            </div>
-            <a href="https://apps.apple.com/app/id6744246412" class="cta-btn-small d-none d-lg-block">Get Started</a>
         </div>
     </nav>
 
     <!-- Header Section -->
     <header class="hero-section">
-        <h1>The Story</h1>
-        <h2>
-            Created by a parent, inspired by every family.
-        </h2>
+        <h1 class="mt-5">The Story</h1>
     </header>
 
     <!-- Section 1: A Parent’s Journey -->
@@ -50,7 +56,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <h2>A Parent’s Journey</h2>
+                    <h2>Created by a parent, inspired by every family.</h2>
                     <p>
                         As a parent of two, I wanted something to help my kids view YouTube safely. What started as a simple
                         project turned into something bigger. Every other parent I spoke to said, “I wish I had something like this.” That’s when I realized this wasn’t just for my kids—it was for families everywhere.
@@ -70,7 +76,7 @@
             <p class="hero-paragraph">
                 With Visor, the mission is to take the worry out of parents' lives while encouraging education and creativity through high-quality content. We aim to inspire creativity, learning, and trust in families through high-quality content.
             </p>
-            <img src="assets/stars.webp?v=1" alt="Cstars and olive branches" class="img-fluid mt-4" style="width: 380px">
+            <img src="assets/stars.webp?v=1" alt="Cstars and olive branches" class="img-fluid" style="width: 200px">
         </div>
     </section>
 
@@ -92,7 +98,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 mt-3">
+                <div class="col-md-6 mt-3 thename">
                     <p>
                         The name “Visor” was inspired during a visit to my daughter’s second-grade classroom event, “Cuddle Up and Read.” While my wife read a book, the word “Visor” came up. My daughter asked what it meant, and we explained: “A Visor is something that protects you.” That’s when I realized the name perfectly reflected what the app does—creating a layer of protection for families online.
                     </p>
@@ -104,11 +110,11 @@
     <!-- Section 4: Call to Action -->
     <section class="whitebackground-section py-5" id="download">
         <div class="container text-center mb-4">
-            <h2 class="mb-4">Try Visor for Free</h2>
-            <p class="hero-paragraph mx-auto mb-4">
+            <h2 class="mb-2">Try Visor for Free</h2>
+            <p class="hero-paragraph mx-auto mb-2">
                  Take control of your family’s viewing experience and see the difference it makes. Enjoy peace of mind and creative exploration.
             </p>
-            <a href="https://apps.apple.com/app/id6744246412" class="cta-btn">Try Visor for Free</a>
+            <a href="https://apps.apple.com/app/id6744246412" class="cta-btn">Download the App</a>
         </div>
     </section>
 

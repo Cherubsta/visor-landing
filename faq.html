@@ -11,52 +11,56 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
     <link rel="icon" href="assets/favicon.ico" sizes="32x32" type="image/x-icon">
+    <style>
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .navbar .navbar-brand:hover {
+            color: inherit !important; /* Keep the original color */
+            background-color: transparent !important; /* No background change */
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="/index">
+            <!-- Left-aligned brand -->
+            <a class="navbar-brand d-flex align-items-center" href="https://gotvisor.com">
                 <img src="assets/logo.webp?v=1" alt="Visor Logo" style="height: 40px;">
                 <span class="app-name">visor</span>
             </a>
-            <button class="navbar-toggler ms-auto d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="/#features">How it works</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://apps.apple.com/app/id6744246412">Download</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/story">Story</a></li>
-                </ul>
-            </div>
-            <a href="https://apps.apple.com/app/id6744246412" class="cta-btn-small d-none d-lg-block">Get Started</a>
         </div>
     </nav>
 
     <!-- Header Section -->
     <header class="hero-section">
-        <h1>Frequently Asked Questions</h1>
+        <h1 class="mt-5">Frequently Asked Questions</h1>
         <p class="hero-paragraph">
             We’ve got answers. Explore common topics about how Visor works and how it can help your family enjoy a safer, curated YouTube experience.
         </p>
     </header>
 
     <!-- FAQ Section -->
-    <section class="whitebackground-section py-5">
+    <section class="">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-10 col-lg-8">
-                    <h2 class="text-center mb-4">General Questions</h2>
                     <div class="accordion" id="faqAccordion">
                         <!-- FAQ Item 1 -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="faqHeading1">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1">
                                     What is Visor?
                                 </button>
                             </h2>
-                            <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1">
+                            <div id="faqCollapse1" class="accordion-collapse collapse" aria-labelledby="faqHeading1">
                                 <div class="accordion-body">
                                     Visor is a parental control app designed to help families manage video content. It allows parents to approve or un-approve channels, ensuring a safe, curated viewing experience.
                                 </div>
@@ -117,6 +121,17 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Call to Action -->
+    <section class="whitebackground-section py-5" id="download">
+        <div class="container text-center mb-2">
+            <h2 class="mb-2">Try Visor for Free</h2>
+            <p class="hero-paragraph mx-auto mb-2">
+                 Take control of your family’s viewing experience and see the difference it makes. Enjoy peace of mind and creative exploration.
+            </p>
+            <a href="https://apps.apple.com/app/id6744246412" class="cta-btn">Download the App</a>
         </div>
     </section>
 
