@@ -1,269 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Visor: The best parental control app for YouTube. Approve channels, manage profiles, and create a safe, worry-free viewing experience for your family.">
-    <meta name="keywords" content="parent-approved YouTube channels, parental control app, YouTube parental controls, family-friendly YouTube, safe YouTube viewing, kids YouTube, manage YouTube channels, approve channels, YouTube app for parents">
-    <meta name="author" content="Visor App">
-    <!-- <meta name="apple-itunes-app" content="app-id=6744246412"> -->
-    <!-- X Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Visor: The Best Parental Control for YouTube">
-    <meta name="twitter:description" content="Manage YouTube channels for your family and ensure a worry-free viewing experience with Visor.">
-    <meta name="twitter:image" content="assets/hero-alt.webp?v=1">
-    <meta name="twitter:site" content="@YourTwitterHandle">
-    <!-- Meta Tags -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Parental control app for YouTube. Approve channels and keep your kids safe with family-friendly, curated content. Try Visor for free." />
-    <!-- Open Graph / Facebook Tags -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://gotvisor.com" />
-    <meta property="og:title" content="Visor: The Best Parental Control for YouTube" />
-    <meta property="og:description" content="Create a safe YouTube environment for your family with Visor. Approve channels, manage profiles, and take control of YouTube content today." />
-    <meta property="og:image" content="assets/hero-alt.webp?v=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Visor: The best parental control app for YouTube. Approve channels, manage profiles, and create a safe, worry-free viewing experience for your family.">
+  <meta name="keywords" content="parent-approved YouTube channels, parental control app, YouTube parental controls, family-friendly YouTube, safe YouTube viewing, kids YouTube, manage YouTube channels, approve channels, YouTube app for parents">
+  <meta name="author" content="Visor App">
+  <!-- <meta name="apple-itunes-app" content="app-id=6744246412"> -->
+  <!-- X Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Visor: The Best Parental Control for YouTube">
+  <meta name="twitter:description" content="Manage YouTube channels for your family and ensure a worry-free viewing experience with Visor.">
+  <meta name="twitter:image" content="assets/hero-alt.webp?v=1">
+  <meta name="twitter:site" content="@YourTwitterHandle">
+  <!-- Meta Tags -->
+  <meta name="description" content="Parental control app for YouTube. Approve channels and keep your kids safe with family-friendly, curated content. Try Visor for free." />
+  <!-- Open Graph / Facebook Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gotvisor.com" />
+  <meta property="og:title" content="Visor: The Best Parental Control for YouTube" />
+  <meta property="og:description" content="Create a safe YouTube environment for your family with Visor. Approve channels, manage profiles, and take control of YouTube content today." />
+  <meta property="og:image" content="assets/hero-alt.webp?v=1" />
 
-    <title>Visor: Parental Control for YouTube | Approve Channels</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
-    <link rel="icon" href="assets/favicon.ico" sizes="32x32" type="image/x-icon">
+  <title>Visor: Parental Control for YouTube | Approve Channels</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <link rel="icon" href="assets/favicon.ico" sizes="32x32" type="image/x-icon">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <!-- Left-aligned brand -->
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="assets/logo.webp?v=1" alt="Visor Logo" style="height: 40px;">
-                <span class="app-name">visor</span>
-            </a>
+  <!-- Logo -->
+  <a href="/" class="floating-brand">
+    <img src="assets/logo.webp?v=1" alt="Visor Logo">
+    <span>visor</span>
+  </a>
 
-            <!-- Toggler for smaller screens -->
-            <button class="navbar-toggler ms-auto d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content container-slim">
+      <h1>Finally, a Family Approved YouTube</h1>
+      <p class="hero-subtitle">
+        You Approve. They Explore. Everyone Wins.
+      </p>
+    </div>
 
-            <!-- Centered navigation links -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="#features">How it works</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://apps.apple.com/app/id6744246412">Download</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/story">Story</a></li>
-                </ul>
-            </div>
+    <!-- New rotating visual -->
+    <div class="hero-visual-wrapper">
+      <div class="hero-visual">
+        <img src="assets/hero-1.webp" alt="Explore view on iPad and dashboard on iPhone" class="hero-slide active">
+        <img src="assets/hero-2.webp" alt="Latest videos on iPad and dashboard on iPhone" class="hero-slide">
+      </div>
+    </div>
+    
+    <!-- Mobile-first order -->
+    <p class="hero-paragraph mx-auto d-block d-md-none mb-3">
+      With Visor, your kids watch only the channels you approve—no surprises, no stress. Explore trusted content and relax knowing they’re watching safely.
+    </p>
 
-            <!-- Call-to-action button -->
-            <a href="https://apps.apple.com/app/id6744246412" class="cta-btn-small d-none d-lg-block">Get Started</a>
-        </div>
-    </nav>
+    <a href="https://apps.apple.com/app/id6744246412" class="cta-btn">Download the App</a>
+    <div class="trusted-by mt-3 mb-5">Made for parents, by parents.</div>
 
-    <!-- Hero Section -->
-    <header class="hero-section">
-        <h1>Your Family’s Safe Space on YouTube</h1>
-            <p class="hero-paragraph">
-                Only the YouTube channels you approve. Whether it's art, science, or fun&mdash;you set the tone and we keep out the rest.
+    <!-- Desktop order -->
+    <p class="hero-paragraph mx-auto d-none d-md-block mt-3">
+      With Visor, your kids watch only the channels you approve—no surprises, no stress. Explore trusted content and relax knowing they’re watching safely.
+    </p>
+
+    <section class="container-fluid px-3 px-md-5 my-5">
+      <div class="row align-items-center justify-content-center g-4">
+        <!-- Copy (left on desktop, top on mobile) -->
+        <div class="col-12 col-md-4 d-flex justify-content-end">
+          <div class="copy-wrapper text-start">
+            <h3 class="section-title mb-3 mt-5">Approve in seconds</h3>
+
+            <!-- Desktop/tablet copy -->
+            <p class="lead d-none d-md-block">
+              When your kid finds a channel they want to watch, it appears in your dashboard for review. Just tap “Approve” and it’s instantly added to their safe library. No random ads, no comments, no Shorts, and no surprise recommendations—only the channels you trust.
             </p>
-        <a href="https://apps.apple.com/app/id6744246412" class="cta-btn">Download App</a>
-        <div class="trusted-by mt-3">Made for parents, by parents.</div>
 
-        <!-- Hero Images -->
-        <div class="hero-images my-5">
-            <div class="image-wrapper right mt-5">
-                <img src="assets/hero-right.webp?v=1" alt="Right Image" class="flanked-image">
-                <div class="text-box left">You approve the content <span><img src="assets/checkbox.svg" alt="☑️" class="checked"></span>
-                </div>
-            </div>
-            <div class="image-wrapper center mt-5">
-                <img src="assets/hero.webp?v=1" alt="Center Image" class="main-image">
-                <div class="text-box">All their faves&mdash;<em>curated.</em></div>
-            </div>
-            <div class="image-wrapper left">
-                <img src="assets/hero-left.webp?v=1" alt="Left Image" class="flanked-image">
-                <div class="text-box right mt-5">A world of inspiring content!</div>
-            </div>
-        </div>
-        <p class="hero-paragraph mt-3">Say bye bye to unexpected ads, wierd recommendations, and mindless shorts&mdash;enjoy a curated viewing experience designed for your family’s peace of mind.</p>
-        <div id="features"></div>
-    </header>
-
-    <!-- How it Works Section -->
-    <section class="graybackground-section mb-5">
-      <div class="container-fluid px-3 px-md-5">
-        <div class="content-wrapper">
-          <h2 class="text-center">How it Works</h2>
-          <div class="row g-4">
-            <div class="col-12 col-md-6">
-              <div class="feature-card">
-                <div class="image-wrapper">
-                  <img src="assets/youtube-feed2.webp?v=1" alt="A typical YouTube feed" class="img-fluid blurred-image" />
-                  <img src="assets/youtube-feed.webp?v=1" alt="A typical YouTube feed" class="img-fluid mb-3 blurred-image" />
-                </div>
-                <h3 class="section-title">Curate with Confidence</h3>
-                <p>
-                  They pick what looks fun. You approve what’s actually okay. No random junk slips through.
-                </p>
-                <p><a href="/faq" target="_blank" rel="noopener noreferrer">Learn more...</a></p>
-              </div>
-            </div>
-
-            <div class="col-12 col-md-6">
-              <div class="feature-card">
-                <img src="assets/parent-dashboard.gif" alt="Parent approving channels on Visor dashboard" class="img-fluid w-100 mb-3" />
-                <h3 class="section-title">Approved Channels Only</h3>
-                <p>
-                  Just what you signed off on. No Shorts, no comments, no dark rabbit holes.
-                </p>
-              </div>
-            </div>
+            <!-- Mobile copy -->
+            <p class="lead d-md-none">
+              Tap “Approve” and it’s live in seconds. Only trusted channels, no Shorts or surprises.
+            </p>
           </div>
-          <p class="hero-paragraph text-center mt-3">
-            Check the box and that’s it—your kid’s YouTube is now filtered to only what you’ve picked. Approve the channels you’re good with, and we’ll make sure they only see those.
-          </p>
+        </div>
+
+        <!-- Demo GIF (right on desktop, below on mobile) -->
+        <div class="col-12 col-md-4 text-center">
+          <img
+            src="assets/allow-gif.gif"
+            alt="Parent approving a channel from the Dashboard"
+            class="demo-gif"
+          >
+          <div class="small text-muted mt-2">Quick approve from the Dashboard</div>
         </div>
       </div>
-    </section>       
-
-    <!-- Categories Section -->
-    <section class="whitebackground-section py-5">
-        <div class="container text-center">
-            <!-- Section Title -->
-            <h2>Discovery for Curious Minds</h2>
-            
-            <!-- Pills -->
-            <div class="row justify-content-center my-5">
-                <div class="col-md-10">
-                    <div class="d-flex flex-wrap justify-content-center gap-3">
-                        <!-- Pills -->
-                        <div class="pill-item">
-                            <img src="assets/star.webp?v=1" alt="Popular" class="pill-icon normal"> Popular
-                        </div>
-                        <div class="pill-item">
-                            <img src="assets/paintpalette.webp?v=1" alt="Art" class="pill-icon normal"> Art
-                        </div>
-                        <div class="pill-item">
-                            <img src="assets/atom.webp?v=1" alt="Science and Tech" class="pill-icon normal"> Science and Tech
-                        </div>
-                        <div class="pill-item">
-                            <img src="assets/sportscourt.webp?v=1" alt="Sports & Fitness" class="pill-icon normal"> Sports & Fitness
-                        </div>
-                        <div class="pill-item">
-                            <img src="assets/wrench.and.screwdriver.webp?v=1" alt="DIY & Crafts" class="pill-icon normal"> DIY & Crafts
-                        </div>
-                        <div class="pill-item">
-                            <img src="assets/face.smiling.webp?v=1" alt="Comedy" class="pill-icon normal"> Comedy
-                        </div>
-                        <div class="pill-item">
-                            <img src="assets/music.note.webp?v=1" alt="Music" class="pill-icon normal"> Music
-                        </div>
-                        <div class="pill-item">
-                            <img src="assets/gamecontroller.webp?v=1" alt="Gaming" class="pill-icon normal"> Gaming
-                        </div>
-                        <div class="pill-item">
-                            <img src="assets/film.webp?v=1" alt="Entertainment" class="pill-icon normal"> Entertainment
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <p class="hero-paragraph mb-4">Let your family explore a curated selection of educational, creative, and fun channels. Visor also makes it easy to search for the content that fits everyone's interests.</p>
-
-        </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="graybackground-section py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">What People Are Saying</h2>
-            <div class="row g-4">
-                <!-- Testimonial 1 -->
-                <div class="col-md-4">
-                    <div class="graybackground-card">
-                        <img src="assets/Sarah-H.webp?v=1" alt="Parent" class="graybackground-img">
-                        <h5 class="mt-3">Sarah H.</h5>
-                        <footer class="text-muted">Parent of Two</footer>
-                        <p>"This genius app made it easy to control what my kids watch. They love that they can choose their own viewing, and I feel more comfortable knowing that what they see is pre-approved."</p>
-                    </div>
-                </div>
-
-                <!-- Testimonial 2 -->
-                <div class="col-md-4">
-                    <div class="graybackground-card">
-                        <img src="assets/Jason-R.webp?v=1" alt="Teacher" class="graybackground-img">
-                        <h5 class="mt-3">Mr. Jason R.</h5>
-                        <footer class="text-muted">School Teacher</footer>
-                        <p>"I sometimes recommend Visor to parents at our school. It’s a good alternative, without worrying about inappropriate content slipping through."</p>
-                    </div>
-                </div>
-
-                <!-- Testimonial 3 -->
-                <div class="col-md-4">
-                    <div class="graybackground-card">
-                        <img src="assets/Abbey-G.webp?v=1" alt="Parent" class="graybackground-img">
-                        <h5 class="mt-3">Abbey G.</h5>
-                        <footer class="text-muted">Working Mom</footer>
-                        <p>"I used to constantly look over my kids shoulder. But now I can just approve videos ahead of time and let them watch safely. A huge time-saver for busy moms like me!!"</p>
-                    </div>
-                </div>
-
-                <!-- Testimonial 4 -->
-                <div class="col-md-4">
-                    <div class="graybackground-card">
-                        <img src="assets/Betty-H.webp?v=1" alt="Grandparent" class="graybackground-img">
-                        <h5 class="mt-3">Betty H.</h5>
-                        <footer class="text-muted">Grandparent</footer>
-                        <p>"I wanted a way to share educational videos with my grandkids. Visor made this easy to set up and I don't have to worry about weird videos popping up."</p>
-                    </div>
-                </div>
-
-                <!-- Testimonial 5 -->
-                <div class="col-md-4">
-                    <div class="graybackground-card">
-                        <img src="assets/Michelle-T.webp?v=1" alt="Parent" class="graybackground-img">
-                        <h5 class="mt-3">Michelle T.</h5>
-                        <footer class="text-muted">Mom</footer>
-                        <p>"My 10-year-old is starting to ask about science and DIY content. I think Visor is a good way for her learn and grow, while I can keep an eye on what’s appropriate."</p>
-                    </div>
-                </div>
-
-                <!-- Testimonial 6 -->
-                <div class="col-md-4">
-                    <div class="graybackground-card">
-                        <img src="assets/Emily-K.webp?v=1" alt="Parent" class="graybackground-img">
-                        <h5 class="mt-3">Emily K.</h5>
-                        <footer class="text-muted">New Parent</footer>
-                        <p>"My daughter loves gaming videos, but I was worried about what she might stumble upon. With this app, I know she’s only watching content I approve."</p>
-                    </div>
-                </div>
-            </div>
+    <!-- Kids Explore Section -->
+    <section class="explore-section container-fluid px-3 px-md-5">
+      <div class="row align-items-center justify-content-center g-4">
+        <!-- Image (left on desktop, top on mobile) -->
+        <div class="col-12 col-md-4 text-center">
+          <img src="assets/hero.webp?v=1" alt="Kid browsing approved channels in Visor app" class="explore-image">
         </div>
-    </section>
 
-    <!-- Summary Section -->
-    <section class="whitebackground-section py-5" id="download">
-        <div class="container text-center mb-4">
-            <div class="image-wrapper center mt-5">
-                <img src="assets/hero-alt.webp?v=1" alt="Center Image" class="alt-image">
-            </div>
-            <h2 class="mb-4">Their Playlist, Your Peace of Mind</h2>
-            <p class="hero-paragraph mx-auto mb-4">
-                Visor makes it easy to manage your family’s YouTube experience. Explore trusted content, approve channels, and relax knowing your family can watch safely. Try the app for free today!
+        <!-- Copy (right on desktop, below on mobile) -->
+        <div class="col-12 col-md-4 d-flex justify-content-start">
+          <div class="explore-copy">
+            <h3 class="explore-title mb-3">They Explore, You Relax</h3>
+
+            <!-- Desktop/tablet copy -->
+            <p class="explore-text d-none d-md-block">
+              Once channels are approved, your kids can watch freely from their own devices (iPad or iPhone). Every video comes from the channels you’ve pre-selected—no hidden comments, no algorithm surprises. Just fun, safe, and inspiring content, ready when they are.
             </p>
-            <a href="https://apps.apple.com/app/id6744246412" class="cta-btn">Try Visor for Free</a>
+
+            <!-- Mobile copy -->
+            <p class="explore-text d-md-none">
+              Kids can explore and watch safely from their own device—only from the channels you’ve approved.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
+    <div id="features"></div>
+  </section>
 
-    <!-- Footer -->
-    <div id="footer-container"></div>
-    <script>
-    fetch('footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('footer-container').innerHTML = data;
-      });
-    </script>
+  <!-- Screentime Section -->
+  <section class="mb-5">
+    <div class="container-fluid px-3 px-md-5">
+      <div class="content-wrapper">
+        <div class="row g-4 justify-content-center">
+          <div class="col-12 col-md-8 mx-auto">
+            <div class="feature-card text-center">
+              <div class="image-wrapper">
+                <img src="assets/youtube-feed.webp?v=1" alt="A typical YouTube feed" class="img-fluid mb-3 blurred-image" />
+              </div>
+              <h3 class="section-title">Curate with Confidence</h3>
+              <p>
+                They pick what looks fun. You approve what’s actually okay. No random junk slips through. Say bye bye to unexpected ads, wierd recommendations, and mindless shorts—enjoy a curated viewing experience designed for your family’s peace of mind.
+              </p>
+              <p><a href="/faq" target="_blank" rel="noopener noreferrer">Learn more...</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>   
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Categories Section -->
+  <section class="whitebackground-section py-5">
+    <div class="container text-center">
+      <!-- Section Title -->
+      <h2>Curated Recommendations</h2>
+        
+      <!-- Pills -->
+      <div class="row justify-content-center my-2">
+        <div class="col-md-8">
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <!-- Pills -->
+            <div class="pill-item">
+              <img src="assets/star.webp?v=1" alt="Popular" class="pill-icon normal"> Popular
+            </div>
+            <div class="pill-item">
+              <img src="assets/paintpalette.webp?v=1" alt="Art" class="pill-icon normal"> Art
+            </div>
+            <div class="pill-item">
+              <img src="assets/atom.webp?v=1" alt="Science and Tech" class="pill-icon normal"> Science and Tech
+            </div>
+            <div class="pill-item">
+              <img src="assets/sportscourt.webp?v=1" alt="Sports & Fitness" class="pill-icon normal"> Sports & Fitness
+            </div>
+            <div class="pill-item">
+              <img src="assets/wrench.and.screwdriver.webp?v=1" alt="DIY & Crafts" class="pill-icon normal"> DIY & Crafts
+            </div>
+            <div class="pill-item">
+              <img src="assets/face.smiling.webp?v=1" alt="Comedy" class="pill-icon normal"> Comedy
+            </div>
+            <div class="pill-item">
+              <img src="assets/music.note.webp?v=1" alt="Music" class="pill-icon normal"> Music
+            </div>
+            <div class="pill-item">
+              <img src="assets/gamecontroller.webp?v=1" alt="Gaming" class="pill-icon normal"> Gaming
+            </div>
+            <div class="pill-item">
+              <img src="assets/film.webp?v=1" alt="Entertainment" class="pill-icon normal"> Entertainment
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="hero-paragraph my-5">Let your family explore a curated selection of educational, creative, and fun channels. Visor also makes it easy to search for the content that fits everyone's interests.</p>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="graybackground-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Family Reviews</h2>
+      <div class="row g-4">
+        <!-- Testimonial 1 -->
+        <div class="col-md-4">
+          <div class="graybackground-card">
+            <img src="assets/Sarah-H.webp?v=1" alt="Parent" class="graybackground-img">
+            <h5 class="mt-3">Sarah H.</h5>
+            <footer class="text-muted">Parent of Two</footer>
+            <p>"This genius app made it easy to control what my kids watch. They love that they can choose their own viewing, and I feel more comfortable knowing that what they see is pre-approved."</p>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="col-md-4">
+          <div class="graybackground-card">
+            <img src="assets/Jason-R.webp?v=1" alt="Teacher" class="graybackground-img">
+            <h5 class="mt-3">Mr. Jason R.</h5>
+            <footer class="text-muted">School Teacher</footer>
+            <p>"I sometimes recommend Visor to parents at our school. It’s a good alternative, without worrying about inappropriate content slipping through."</p>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="col-md-4">
+          <div class="graybackground-card">
+            <img src="assets/Abbey-G.webp?v=1" alt="Parent" class="graybackground-img">
+            <h5 class="mt-3">Abbey G.</h5>
+            <footer class="text-muted">Working Mom</footer>
+            <p>"I used to constantly look over my kids shoulder. But now I can just approve videos ahead of time and let them watch safely. A huge time-saver for busy moms like me!!"</p>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="col-md-4">
+          <div class="graybackground-card">
+            <img src="assets/Betty-H.webp?v=1" alt="Grandparent" class="graybackground-img">
+            <h5 class="mt-3">Betty H.</h5>
+            <footer class="text-muted">Grandparent</footer>
+            <p>"I wanted a way to share educational videos with my grandkids. Visor made this easy to set up and I don't have to worry about weird videos popping up."</p>
+          </div>
+        </div>
+
+        <!-- Testimonial 5 -->
+        <div class="col-md-4">
+          <div class="graybackground-card">
+            <img src="assets/Michelle-T.webp?v=1" alt="Parent" class="graybackground-img">
+            <h5 class="mt-3">Michelle T.</h5>
+            <footer class="text-muted">Mom</footer>
+            <p>"My 10-year-old is starting to ask about science and DIY content. I think Visor is a good way for her learn and grow, while I can keep an eye on what’s appropriate."</p>
+          </div>
+        </div>
+
+        <!-- Testimonial 6 -->
+        <div class="col-md-4">
+          <div class="graybackground-card">
+            <img src="assets/Emily-K.webp?v=1" alt="Parent" class="graybackground-img">
+            <h5 class="mt-3">Emily K.</h5>
+            <footer class="text-muted">New Parent</footer>
+            <p>"My daughter loves gaming videos, but I was worried about what she might stumble upon. With this app, I know she’s only watching content I approve."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="whitebackground-section py-5" id="download">
+    <div class="container text-center mb-4">
+      <div class="image-wrapper center mt-5">
+        <img src="assets/hero-alt.webp?v=1" alt="Center Image" class="alt-image">
+      </div>
+      <h2 class="mb-4">Their Playlist, Your Peace of Mind</h2>
+      <p class="last-paragraph mx-auto mb-4">
+        Visor makes it easy to manage your family’s YouTube experience. Explore trusted content, approve channels, and relax knowing your family can watch safely. Try the app for free today!
+      </p>
+      <a href="https://apps.apple.com/app/id6744246412" class="cta-btn">Try for Free</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+  <script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-container').innerHTML = data;
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Hero Slideshow -->
+  <script>
+    const slides = document.querySelectorAll('.hero-visual .hero-slide');
+    let currentSlide = 0;
+
+    if (slides.length > 1) {
+      setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+      }, 4500); // 4.5s per image
+    }
+  </script>
 </body>
 </html>
