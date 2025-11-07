@@ -548,12 +548,31 @@ opacity: 0.5;
 .footer {
   background-color: #F5F5F5;
   color: #6c757d;
-  font-size: 0.9rem;
+  font-size: 0.95rem; /* slightly larger for readability */
   border-top: 1px solid #ddd;
+  padding: 20px 0; /* add breathing room top and bottom */
 }
 
 .footer a {
   color: #999999;
+  text-decoration: none;
+  margin: 0 10px; /* space between links horizontally */
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile spacing improvements */
+@media (max-width: 576px) {
+  .footer {
+    font-size: 1rem; /* bump slightly more on mobile */
+  }
+
+  .footer a {
+    display: inline-block;
+    margin: 6px 12px; /* extra tap room */
+  }
 }
 
 /* Non-Landing Views */
@@ -613,4 +632,29 @@ opacity: 0.5;
 .terms-section ul {
   padding-left: 20px;
   list-style-type: disc;
+}
+
+/* Blog navigation links */
+.blog-nav-section {
+  background-color: #f8f9fa;
+  border-top: 1px solid #e5e5e5;
+}
+
+.blog-nav-link {
+  font-weight: 600;
+  color: #FF6B6B;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.blog-nav-link:hover {
+  color: #FF5252;
+  text-decoration: underline;
+}
+
+/* Slightly larger and stacked on mobile */
+@media (max-width: 576px) {
+  .blog-nav-link {
+    font-size: 1.05rem;
+  }
 }
