@@ -548,30 +548,51 @@ opacity: 0.5;
 .footer {
   background-color: #F5F5F5;
   color: #6c757d;
-  font-size: 0.95rem; /* slightly larger for readability */
+  font-size: 0.95rem;
   border-top: 1px solid #ddd;
-  padding: 20px 0; /* add breathing room top and bottom */
+  padding: 20px 0;
+}
+
+/* Headings & link alignment */
+.footer h5 {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  text-align: left; /* ensure headings align left everywhere */
+}
+
+.footer ul,
+.footer p,
+.footer a {
+  text-align: left !important; /* enforce uniform alignment */
 }
 
 .footer a {
-  color: #999999;
+  color: #999;
   text-decoration: none;
-  margin: 0 10px; /* space between links horizontally */
+  display: inline-block;
+  margin: 4px 0;
 }
 
 .footer a:hover {
   text-decoration: underline;
 }
 
-/* Mobile spacing improvements */
+/* Right column (gotvisor.com + copyright) */
+.footer .text-md-end {
+  text-align: left !important; /* override Bootstrap’s end alignment */
+}
+
+/* Mobile tweaks for consistent spacing */
 @media (max-width: 576px) {
   .footer {
-    font-size: 1rem; /* bump slightly more on mobile */
+    font-size: 1rem;
   }
-
+  .footer .row {
+    text-align: left;
+  }
   .footer a {
-    display: inline-block;
-    margin: 6px 12px; /* extra tap room */
+    margin: 6px 0;
   }
 }
 
