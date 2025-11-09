@@ -43,7 +43,7 @@ p {
   padding: 0 16px;
 }
 
-/* Floating brand (default: NOT sticky on mobile) */
+/* Floating brand (default styles) */
 .floating-brand {
   position: static;  
   display: inline-flex;
@@ -53,7 +53,7 @@ p {
   padding: 4px 40px;
   border-radius: 999px;
   backdrop-filter: blur(3px);
-  margin: 8px;              
+  margin: 8px;
 }
 .floating-brand img { height: 36px; }
 .floating-brand span {
@@ -64,33 +64,45 @@ p {
 .floating-brand:hover {
   text-decoration: none !important;
 }
-/* Not Sticky only on mobile */
-@media (max-width: 576px) {
+
+/* Centered logo for anything smaller than desktop */
+@media (max-width: 991px) {
   .floating-brand {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     justify-content: center;
     padding-top: 8px;
-    padding-bottom: 18px;
+    padding-bottom: 8px;
   }
 }
-/* Desktop: make the floating brand sticky and left-aligned */
+
+/* Desktop: fixed and left-aligned */
 @media (min-width: 992px) {
   .floating-brand {
-    position: sticky;
-    top: 12px;             /* how far from the top when stuck */
-    margin-left: 16px;     /* keeps it near the left edge */
-    z-index: 1000;         /* stay above page content */
+    position: fixed;
+    top: 25px;
+    left: 16px;
+    margin: 0;
+    z-index: 1000;
   }
 }
 
 /* Hero Section */
 .hero-section {
   text-align: center;
-  background-color: #F5F9E9;  
+  background-color: #F5F9E9;
   max-width: 100%;
+  margin-top: 0;
 }
+
+/* Add breathing room below logo only on desktop */
+@media (min-width: 992px) {
+  .hero-section {
+    margin-top: 30px;
+  }
+}
+
 .hero-section h1 {
   font-size: 2.4rem;
   font-weight: 900;
