@@ -70,9 +70,9 @@ p {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    top: 8px;
     justify-content: center;
-    padding: 18px 8px;
+    padding-top: 12px;
+    padding-bottom: 18px;
   }
 }
 /* Desktop: make the floating brand sticky and left-aligned */
