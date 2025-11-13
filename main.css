@@ -137,22 +137,35 @@ p {
   justify-content: center;
   margin-bottom: 2rem;
 }
+
 .hero-visual {
   position: relative;
   max-width: 960px;
   width: 100%;
   aspect-ratio: 16 / 9;
 }
+
+/* Overlaid slides, fade between them */
 .hero-visual .hero-slide {
-  position: absolute;  
+  position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
   opacity: 0;
   transition: opacity 0.6s ease;
 }
-.hero-visual .hero-slide.active { opacity: 1; }
+
+.hero-visual .hero-slide.active {
+  opacity: 1;
+}
+
+/* Inner image fills container, no weird gaps */
+.hero-visual .hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
 
 .cta-btn {
   font-size: 1.2rem;
@@ -174,76 +187,70 @@ p {
   text-align: center;
 }
 
-/* Hero Section Mobile */
+/* --- Mobile tweaks (same behavior, just height-tuned) --- */
 @media (max-width: 576px) {
+  /* Header + hero copy spacing */
   .hero-section h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;      /* was 20px */
+    margin-bottom: 10px;
+    font-size: 2.0rem;
   }
 
   .hero-paragraph {
-    font-size: 1.5rem !important;
-    padding-top: 12px;
-    padding-bottom: 16px;
+    margin: 0 0 8px 0;
+    padding-bottom: 0px;
+    padding-top: 10px;
+    font-size: 1.3rem !important;
     padding-inline: 8px;
   }
 
+  /* Wrapper: full width with your normal side padding */
   .hero-visual-wrapper {
-    margin-top: 6px;          /* add a touch of separation from copy */
-    margin-bottom: 12px;      /* reduce gap below image */
-    padding-inline: 8px;
-  }
-
-  .cta-btn {
-    margin-top: 6px;          /* keep it close to the image */
-    margin-bottom: 4px;
-  }
-
-  .trusted-by {
-    margin-top: 6px !important;
-    margin-bottom: 16px !important;  /* small breathing room before next section */
-  }
-}
-
-/* --- Tighten hero carousel on mobile --- */
-@media (max-width: 576px) {
-  /* tighten the spacing around the visual */
-  .hero-section h1 { margin-bottom: 10px; }
-  .hero-paragraph { margin: 0 0 8px 0; padding-bottom: 8px; }
-
-  .hero-visual-wrapper {
+    width: 100%;
     margin-top: 6px;
+    margin-bottom: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    display: block;
+  }
+
+  /* Container: no fixed height, no aspect-ratio */
+  .hero-visual {
+    max-width: none;
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    position: static;
+  }
+
+  /* Slides: stack normally, only show the active one */
+  .hero-visual .hero-slide {
+    position: static;
+    opacity: 1;
+    display: none;   /* hide by default */
+  }
+
+  .hero-visual .hero-slide.active {
+    display: block;  /* only active slide is visible */
+  }
+
+  /* Inner image fills width, height is natural */
+  .hero-visual .hero-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* Buttons under the carousel */
+  .cta-btn {
+    display: inline-block;
+    margin-top: 14px;
     margin-bottom: 10px;
   }
 
-  /* give the carousel a fixed, compact height so it doesn't look vertically centered with big gutters */
-  .hero-visual {
-    aspect-ratio: auto;                  /* stop the tall box */
-    height: clamp(240px, 70vw, 360px);   /* responsive, but shorter */
-    position: relative;
-  }
-
-  /* keep slides overlaid AND remove inline image whitespace */
-  .hero-visual .hero-slide {
-    position: absolute;
-    inset: 0;
-    display: block;                      /* kills inline baseline gap */
-    object-fit: contain;                 /* show full image without cropping */
-    opacity: 0;
-    transition: opacity 0.6s ease;
-  }
-  .hero-visual .hero-slide.active { opacity: 1; }
-
-  /* trim the CTA/footer tagline spacing under the carousel */
-  .cta-btn { display: inline-block; margin-top: 14px; margin-bottom: 10px; }
-  .trusted-by { margin-top: 0px !important; margin-bottom: 18px !important; }
-}
-
-/* Mobile tuning: reduce container height but KEEP overlay */
-@media (max-width: 576px) {
-  .hero-visual {
-    max-width: 100%;
-    aspect-ratio: 3 / 4;    /* taller phone-ish frame to avoid pushing below fold */
+  .trusted-by {
+    margin-top: 0 !important;
+    margin-bottom: 18px !important;
   }
 }
 

@@ -55,11 +55,20 @@
       </p>
     </div>
 
-    <!-- New rotating visual -->
+    <!-- Rotating visual -->
     <div class="hero-visual-wrapper">
       <div class="hero-visual">
-        <img src="assets/hero-1.webp" alt="Explore view on iPad and dashboard on iPhone" class="hero-slide active">
-        <img src="assets/hero-2.webp" alt="Latest videos on iPad and dashboard on iPhone" class="hero-slide">
+        <!-- Slide 1 -->
+        <picture class="hero-slide active">
+          <source media="(max-width: 576px)" srcset="assets/hero-1-mobile.webp">
+          <img src="assets/hero-1.webp" alt="Explore view on iPad and dashboard on iPhone">
+        </picture>
+
+        <!-- Slide 2 -->
+        <picture class="hero-slide">
+          <source media="(max-width: 576px)" srcset="assets/hero-2-mobile.webp">
+          <img src="assets/hero-2.webp" alt="Latest videos on iPad and dashboard on iPhone">
+        </picture>
       </div>
     </div>
     
