@@ -1,0 +1,21 @@
+<!-- Google Analytics tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9EXKLJZ9NN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9EXKLJZ9NN');
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('a.cta-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+          gtag('event', 'download_click', {
+            event_category: 'CTA',
+            event_label: this.href,
+            CTA_location: this.getAttribute('data-location') || 'unknown'
+          });
+        });
+      });
+    });
+  </script>
