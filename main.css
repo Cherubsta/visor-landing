@@ -24,6 +24,7 @@ p {
   text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.05); /* Extremely subtle shadow */
 }
 
+/* --- Mobile tweaks --- */
 @media (max-width: 576px) {
   .row.g-4 {
     --bs-gutter-x: 0;
@@ -72,8 +73,8 @@ p {
     left: 50%;
     transform: translateX(-50%);
     justify-content: center;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }
 
@@ -206,8 +207,8 @@ p {
   /* Wrapper: full width with your normal side padding */
   .hero-visual-wrapper {
     width: 100%;
-    margin-top: 6px;
-    margin-bottom: 10px;
+    margin-top: 28px;
+    margin-bottom: 18px;
     padding-left: 12px;
     padding-right: 12px;
     display: block;
@@ -245,7 +246,7 @@ p {
   .cta-btn {
     display: inline-block;
     margin-top: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
   }
 
   .trusted-by {
