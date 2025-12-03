@@ -492,15 +492,78 @@ opacity: 0.5;
 .graybackground-card {
   background-color: white;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
   padding: 20px;
   text-align: center;
   transition: transform 0.3s ease-in-out;
+  color: rgb(147, 147, 147);
+}
+
+/* Testimonials: horizontal rows */
+.testimonials-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Each row scrolls horizontally */
+.testimonials-row {
+  overflow-x: auto;
+  overflow-y: visible;
+  /*padding-bottom: 4px; /* room for scrollbar */*/
+}
+
+/* Hide horizontal scrollbar (keeps scroll functionality) */
+/* Chrome, Safari, Edge */
+.testimonials-row::-webkit-scrollbar {
+  display: none;
+}
+/* Firefox */
+.testimonials-row {
+  scrollbar-width: none;
+}
+/* IE/old Edge (if anyone cares) */
+.testimonials-row {
+  -ms-overflow-style: none;
+}
+
+/* Track: horizontal list of cards */
+.testimonials-track {
+  display: flex;
+  gap: 1rem;
+  padding: 0.25rem 0;
+  min-width: max-content; /* ensures row can extend beyond container */
+}
+
+/* Cards inside horizontal tracks */
+.testimonials-track .graybackground-card {
+  min-width: 260px;
+  max-width: 320px;
+  text-align: left;
+}
+
+/* Stars styling */
+.stars {
+  letter-spacing: 2px;
+  font-size: 1.25rem;
+  color:#FFD166;
+}
+.rating { 
+  text-align: center;
+}   
+
+/* On smaller screens, keep cards compact */
+@media (max-width: 576px) {
+  .testimonials-track .graybackground-card {
+    min-width: 240px;
+    max-width: 260px;
+    padding: 16px;
+  }
 }
 
 .graybackground-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
 }
 
 .graybackground-img {
@@ -517,12 +580,6 @@ opacity: 0.5;
   border-radius: 10px;
   margin-bottom: 40px;
 }
-
-.stars { 
-  color:#FFD166; letter-spacing:2px; 
-}
-
-.rating { margin:0; }   
 
 /* blurred bg helper */
 .blurred-image {
