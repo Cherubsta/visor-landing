@@ -119,10 +119,10 @@ p {
   margin: 0 auto;
   text-align: center;
   line-height: 1.6;
-  font-size: 1.8rem !important;
+  font-size: 1.35rem !important;
   color: #6c757d;
-  padding-top: 50px;
-  padding-bottom: 100px;
+  padding-top: 20px;
+  padding-bottom: 60px;
 }
 
 .last-paragraph {
@@ -131,19 +131,24 @@ p {
   padding-bottom: 20px;
 }
 
-/* Hero visual */
+/* Hero visual - desktop/tablet */
 .hero-visual-wrapper {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
+  margin: 20px auto 18px;
+  padding: 0 16px;
 }
 
 .hero-visual {
-  position: relative;
-  max-width: 960px;
+  max-width: min(1200px, 80vw);
+  max-height: 65vh;
+  margin: 0 auto;
+}
+
+.hero-visual img {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: auto;
+  max-height: 65vh;
+  object-fit: contain;
 }
 
 .cta-btn {
@@ -469,7 +474,7 @@ opacity: 0.5;
 .testimonials-row {
   overflow-x: auto;
   overflow-y: visible;
-  /*padding-bottom: 4px; /* room for scrollbar */*/
+  /*padding-bottom: 4px; /* room for scrollbar */
 }
 
 /* Hide horizontal scrollbar (keeps scroll functionality) */
