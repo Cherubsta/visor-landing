@@ -165,6 +165,16 @@ p {
   text-decoration: none !important;
 }
 
+.appstore-badge {
+  height: 56px;
+  width: auto;
+  transition: transform 0.2s ease;
+}
+
+.appstore-badge:hover {
+  transform: scale(1.03);
+}
+
 .trusted-by {
   font-size: 0.8rem;
   color: #6c757d;
