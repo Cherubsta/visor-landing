@@ -4,7 +4,7 @@ body {
   font-family: 'Nunito', sans-serif;
   margin: 0;
   padding: 0; 
-  color: #595959; /* Set default text color */
+  color: #444; /* Set default text color */
   background-color: #F5F9E9;
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
@@ -105,6 +105,7 @@ p {
 }
 
 .hero-section h1 {
+  padding-top: 15px;
   font-size: 2.4rem;
   font-weight: 900;
   margin-bottom: 20px;
@@ -112,7 +113,7 @@ p {
 }
 .hero-section p {
   font-size: 1.1rem;
-  color: #6c757d;
+  color: #575757;
 }
 .hero-paragraph {
   max-width: 600px;
@@ -120,7 +121,7 @@ p {
   text-align: center;
   line-height: 1.6;
   font-size: 1.35rem !important;
-  color: #6c757d;
+  color: #575757;
   padding-top: 20px;
   padding-bottom: 60px;
 }
@@ -177,7 +178,7 @@ p {
 
 .trusted-by {
   font-size: 0.8rem;
-  color: #6c757d;
+  color: #575757;
   text-align: center;
 }
 
@@ -249,13 +250,6 @@ p {
     max-width: 100%;
   }
 
-  /* match title and text size to Explore section */
-  .copy-wrapper .section-title {
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: #333;
-  }
-
   .copy-wrapper .lead {
     font-size: 1.1rem;
     line-height: 1.6;
@@ -310,7 +304,7 @@ p {
 }
 
 .explore-caption {
-  color: #6c757d;
+  color: #575757;
 }
 
 .explore-copy {
@@ -413,19 +407,19 @@ opacity: 0.5;
 
 .graybackground-section h2 {
   font-size: 2.2rem;
-  font-weight: bold;
+  font-weight: 800;
   margin-bottom: 40px;
 }
 
 .whitebackground-section h2 {
   font-size: 2.2rem;
-  font-weight: bold;
+  font-weight: 800;
   margin-bottom: 30px;
 }
 
 .top-margin-section h2 {
   font-size: 2.2rem;
-  font-weight: bold;
+  font-weight: 800;
   margin-bottom: 30px;
   margin-top: 80px;
 }
@@ -606,7 +600,7 @@ opacity: 0.5;
 /* Footer */
 .footer {
   background-color: #F5F5F5;
-  color: #6c757d;
+  color: #575757;
   font-size: 0.95rem;
   border-top: 1px solid #ddd;
   padding: 20px 0;
@@ -694,7 +688,7 @@ opacity: 0.5;
 
 .terms-header p {
   font-size: 1.2rem;
-  color: #6c757d;
+  color: #575757;
 }
 
 .terms-section {
@@ -707,7 +701,7 @@ opacity: 0.5;
 
 .terms-section h2 {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 800;
   margin-top: 20px;
 }
 
