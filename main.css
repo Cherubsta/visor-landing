@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0; 
   color: #444; /* Set default text color */
-  background-color: #F5F9E9;
+  background-color: #FFFAEF;
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
@@ -50,7 +50,7 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 2px;
-  background: rgba(245, 249, 233, 0.8);
+  background-color: #FFFAEF;
   padding: 4px 40px;
   border-radius: 999px;
   backdrop-filter: blur(3px);
@@ -91,7 +91,7 @@ p {
 /* Hero Section */
 .hero-section {
   text-align: center;
-  background-color: #F5F9E9;
+  background-color: #FFFAEF;
   max-width: 100%;
   margin-top: 0;
 }
@@ -587,9 +587,9 @@ opacity: 0.5;
 
 /* FAQ - Change accordion selected item's background color */
 .accordion-button:not(.collapsed) {
-  background-color: #F5F9E9;
+  background-color: #FFFAEF;
   color: inherit;
-  border-color: #F5F9E9;
+  border-color: #FFFAEF;
 }
 
 .accordion-button {
@@ -674,7 +674,7 @@ opacity: 0.5;
 }
 
 .terms-header {
-  background-color: #F5F9E9;
+  background-color: #FFFAEF;
   padding: 50px 20px;
   text-align: center;
   border-bottom: 2px solid #ddd;
