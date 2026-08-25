@@ -160,9 +160,10 @@
 
         <!-- Demo GIF -->
         <div class="col-12 col-md-4 text-center">
-          <div class="gif-player">
+          <div class="gif-player" data-duration="3000">
             <img
               src="assets/allowchannel-preview.webp"
+              data-preview="assets/allowchannel-preview.webp"
               data-gif="assets/allowchannel.gif"
               alt="Parent approving a channel from the Dashboard"
               class="demo-gif gif-image"
@@ -242,9 +243,10 @@
 
       <!-- Week in Review GIF -->
       <div class="col-12 col-md-4 text-center">
-        <div class="gif-player">
+        <div class="gif-player" data-duration="3000">
           <img
             src="assets/weekinreview-preview.webp"
+            data-preview="assets/weekinreview-preview.webp"
             data-gif="assets/weekinreview.gif"
             alt="Visor Week in Review showing a family's weekly YouTube activity"
             class="demo-gif gif-image"
@@ -267,9 +269,9 @@
   <section class="mb-5">
     <div class="container-fluid px-3 px-md-5">
       <div class="content-wrapper">
-        <div class="row g-4 justify-content-center">
+        <div class="row g-4">
           <div class="col-12 col-md-8 mx-auto">
-            <div class="feature-card text-center">
+            <div class="feature-card">
               <div class="image-wrapper">
                 <img
                   src="assets/youtube-feed.webp?v=1"
@@ -593,12 +595,15 @@
         >
       </div>
 
-      <h2 class="mb-4">
+      <h2 class="mb-1">
         Their YouTube. Your peace of mind.
       </h2>
 
-      <p class="hero-paragraph mx-auto mb-4">
-        You shouldn't have to choose between unrestricted YouTube and no YouTube at all. Visor gives kids room to explore while keeping you in control of what's worth watching.
+      <p class="hero-paragraph mx-auto mb-4 d-none d-md-block">
+        You shouldn't have to choose between unrestricted YouTube and no YouTube at all. Visor gives kids room to explore while keeping you in control.
+      </p>
+      <p class="mx-auto mb-4 mt-4 d-md-none">
+        You shouldn't have to choose between unrestricted YouTube and no YouTube at all. Visor gives kids room to explore while keeping you in control.
       </p>
 
       <a
@@ -633,8 +638,21 @@
       const button = player.querySelector('.gif-play-btn');
 
       button.addEventListener('click', () => {
-        image.src = image.dataset.gif;
+        const gif = image.dataset.gif;
+        const preview = image.dataset.preview;
+        const duration = parseInt(player.dataset.duration, 10);
+
+        // Start GIF from the beginning
+        image.src = '';
+        image.src = gif;
+
         player.classList.add('is-playing');
+
+        // Return to preview when animation finishes
+        setTimeout(() => {
+          image.src = preview;
+          player.classList.remove('is-playing');
+        }, duration);
       });
     });
   </script>
