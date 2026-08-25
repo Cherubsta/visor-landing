@@ -943,6 +943,8 @@ p {
   background: transparent;
 
   cursor: pointer;
+
+  animation: playPulse 2s ease-in-out infinite;
 }
 
 .gif-play-icon {
@@ -952,12 +954,24 @@ p {
 }
 
 .gif-play-btn:hover {
-  transform: translate(-50%, -50%) scale(1.06);
+  animation: none;
+  transform: translate(-50%, -50%) scale(1.08);
 }
 
 .gif-player.is-playing .gif-play-btn {
   opacity: 0;
   pointer-events: none;
+  animation: none;
+}
+
+@keyframes playPulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.08);
+  }
 }
 
 /* Slightly larger and stacked on mobile */
