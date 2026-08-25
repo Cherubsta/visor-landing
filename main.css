@@ -4,7 +4,7 @@ body {
   font-family: 'Nunito', sans-serif;
   margin: 0;
   padding: 0; 
-  color: #444; /* Set default text color */
+  color: #484848; /* Set default text color */
   background-color: #FFFAEF;
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
@@ -56,12 +56,17 @@ p {
   backdrop-filter: blur(3px);
   margin: 8px;
 }
-.floating-brand img { height: 36px; }
+
+.floating-brand img {
+  height: 36px;
+}
+
 .floating-brand span {
   color: #595959;
   font-weight: 700;
   font-size: 1.1rem;
 }
+
 .floating-brand:hover {
   text-decoration: none !important;
 }
@@ -110,16 +115,18 @@ p {
   margin-bottom: 20px;
   line-height: 1.2;
 }
-.hero-section p {
+
+.hero-subtitle {
   font-size: 1.1rem;
   color: #575757;
 }
+
 .hero-paragraph {
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
   line-height: 1.6;
-  font-size: 1.35rem !important;
+  font-size: 1.35rem;
   color: #575757;
   padding-top: 20px;
   padding-bottom: 60px;
@@ -151,6 +158,29 @@ p {
   object-fit: contain;
 }
 
+.hero-content {
+  position: relative;
+}
+
+.hero-sticker {
+  position: absolute;
+  width: 120px;
+  height: auto;
+  right: 100px;
+  bottom: -106px;
+  transform: rotate(-5deg);
+  z-index: 10;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .hero-sticker {
+    width: 96px;
+    right: 2px;
+    bottom: -93px;
+  }
+}
+
 .cta-btn {
   font-size: 1.2rem;
   font-weight: bold;
@@ -176,7 +206,8 @@ p {
 }
 
 .trusted-by {
-  font-size: 0.6rem;
+  padding-top: 2px;
+  font-size: 0.7rem;
   color: #575757;
   text-align: center;
 }
@@ -185,8 +216,8 @@ p {
 @media (max-width: 576px) {
   /* Header + hero copy spacing */
   .hero-section h1 {
-    margin-bottom: 10px;
-    font-size: 2.10rem;
+    margin-bottom: 40px;
+    font-size: 2.0rem;
     font-weight: 1000;
   }
 
@@ -194,7 +225,7 @@ p {
     margin: 0 0 8px 0;
     padding-bottom: 20px;
     padding-top: 20px;
-    font-size: 1.3rem !important;
+    font-size: 1.3rem;
     padding-inline: 8px;
   }
 
@@ -229,6 +260,10 @@ p {
   }
 }
 
+/*
+  Legacy copy-wrapper styles.
+  Kept because main.css is shared with other pages.
+*/
 .copy-wrapper {
   max-width: 420px;
   text-align: left;
@@ -290,7 +325,88 @@ p {
   border-radius: 10px;
 }
 
-/* Kids Explore Section */
+/* Shared landing-page feature rows */
+.feature-section {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+
+.feature-copy {
+  max-width: 420px;
+  text-align: left;
+}
+
+.feature-copy-left {
+  padding-right: 24px;
+}
+
+.feature-copy-right {
+  padding-left: 24px;
+}
+
+.feature-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #FF6B6B;
+}
+
+.feature-title {
+  font-size: 1.9rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.feature-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+@media (min-width: 992px) {
+  .feature-copy-left {
+    padding-right: 40px;
+  }
+
+  .feature-copy-right {
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .feature-section {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  .feature-copy,
+  .feature-copy-left,
+  .feature-copy-right {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .feature-title {
+    font-size: 1.75rem;
+  }
+
+  .feature-text {
+    font-size: 1.05rem;
+    line-height: 1.55;
+  }
+}
+
+/*
+  Legacy Kids Explore styles.
+  Kept because main.css may reference them from other pages.
+*/
 .explore-section {
   margin-top: 7rem;
   margin-bottom: 7rem;
@@ -373,7 +489,7 @@ p {
 }
 
 .text-muted {
-opacity: 0.5;
+  opacity: 0.5;
 }
 
 .checked {
@@ -500,14 +616,8 @@ opacity: 0.5;
   transform: translateX(80px);
 }
 
-.testimonials-track .graybackground-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-}
 .graybackground-card p:last-child {
-
   margin-bottom: 0;
-
 }
 
 /* Stars styling */
@@ -596,7 +706,10 @@ opacity: 0.5;
   border-color: rgba(255, 107, 107, 0.3);
 }
 
-/* Week in Review */
+/*
+  Legacy Week in Review styles.
+  Kept because main.css may reference them from other pages.
+*/
 .week-review-section {
   margin-top: 8rem;
   margin-bottom: 8rem;
@@ -715,9 +828,11 @@ opacity: 0.5;
   .footer {
     font-size: 1rem;
   }
+
   .footer .row {
     text-align: left;
   }
+
   .footer a {
     margin: 6px 0;
   }
@@ -737,10 +852,12 @@ opacity: 0.5;
   background-color: transparent !important; /* No background change */
   text-decoration: none;
 }
+
 .thename {
   padding-inline: 60px;
   font-size: 1.2rem;
 }
+
 /* Mobile tweaks for consistent spacing */
 @media (max-width: 576px) {
   .thename {
@@ -779,7 +896,8 @@ opacity: 0.5;
   margin-top: 20px;
 }
 
-.terms-section p, .terms-section ul {
+.terms-section p,
+.terms-section ul {
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -805,6 +923,41 @@ opacity: 0.5;
 .blog-nav-link:hover {
   color: #FF5252;
   text-decoration: underline;
+}
+
+.gif-player {
+  position: relative;
+  display: inline-block;
+}
+
+.gif-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.gif-play-icon {
+  display: block;
+  width: 64px;
+  height: auto;
+}
+
+.gif-play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.06);
+}
+
+.gif-player.is-playing .gif-play-btn {
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* Slightly larger and stacked on mobile */
