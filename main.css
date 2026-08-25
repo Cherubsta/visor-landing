@@ -117,7 +117,7 @@ p {
 }
 
 .hero-subtitle {
-  font-size: 1.1rem;
+  font-size: 1.7rem;
   color: #575757;
 }
 
@@ -928,6 +928,14 @@ p {
 .gif-player {
   position: relative;
   display: inline-block;
+  overflow: hidden;
+  border-radius: 16px;
+  line-height: 0;
+}
+
+.gif-player .demo-gif {
+  display: block;
+  transform: translateY(2px);
 }
 
 .gif-play-btn {
