@@ -628,18 +628,20 @@
       const image = player.querySelector('.gif-image');
       const button = player.querySelector('.gif-play-btn');
 
+      const gif = image.dataset.gif;
+      const preview = image.dataset.preview;
+      const duration = parseInt(player.dataset.duration, 10);
+
+      // Preload GIF
+      const preloadedGif = new Image();
+      preloadedGif.src = gif;
+
       button.addEventListener('click', () => {
-        const gif = image.dataset.gif;
-        const preview = image.dataset.preview;
-        const duration = parseInt(player.dataset.duration, 10);
-
-        // Start GIF from the beginning
-        image.src = '';
-        image.src = gif;
-
         player.classList.add('is-playing');
 
-        // Return to preview when animation finishes
+        // Swap to GIF once it's already cached
+        image.src = gif;
+
         setTimeout(() => {
           image.src = preview;
           player.classList.remove('is-playing');
