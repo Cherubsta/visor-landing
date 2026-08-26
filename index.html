@@ -122,7 +122,7 @@
       >
     </a>
 
-    <div class="trusted-by mt-1 mb-5">
+    <div class="trusted-by mt-1 mb-8">
       Built for kids. Designed for parents.
     </div>
 
@@ -132,25 +132,34 @@
 
       <div class="row align-items-center justify-content-center g-4">
 
-        <!-- Copy -->
-        <div class="col-12 col-md-4 d-flex justify-content-end">
+        <!-- Copy: second on mobile, first on desktop -->
+        <div class="col-12 col-md-4 d-flex justify-content-end order-2 order-md-1">
           <div class="feature-copy feature-copy-left">
-            <div class="feature-label">Only the good stuff</div>
+
+            <!-- Desktop label -->
+            <div class="feature-label d-none d-md-block">
+              They request, you approve
+            </div>
 
             <h3 class="feature-title">
-              They request, you approve
+              You can’t always be watching
             </h3>
 
-            <!-- Desktop/tablet copy -->
-            <p class="feature-text d-md-block">
-              You can’t always be there to see what they’re watching. Visor gives them the freedom to watch on their own, without you constantly looking over their shoulder.
+            <p class="feature-text">
+              Visor gives your kiddos the freedom to watch, without you having to constantly hover over their shoulder.
             </p>
 
           </div>
         </div>
 
-        <!-- Demo GIF -->
-        <div class="col-12 col-md-4 text-center">
+        <!-- GIF: first on mobile, second on desktop -->
+        <div class="col-12 col-md-4 text-center order-1 order-md-2">
+
+          <!-- Mobile label -->
+          <div class="feature-label d-block d-md-none">
+            They request, you approve
+          </div>
+
           <div class="gif-player" data-duration="3000">
             <img
               src="assets/allowchannel-preview.webp"
@@ -164,10 +173,13 @@
               <img src="assets/playgif.webp" alt="" class="gif-play-icon">
             </button>
           </div>
+
           <div class="small text-muted mt-2">
             One tap. You're done.
           </div>
+
         </div>
+
       </div>
     </section>
 
@@ -184,22 +196,22 @@
           >
         </div>
 
-        <!-- Copy -->
         <div class="col-12 col-md-4 d-flex justify-content-start">
           <div class="feature-copy feature-copy-right">
             <h3 class="feature-title">
-              All their favorites, in one safe place
+              Safe space for all their faves
             </h3>
 
             <!-- Desktop/tablet copy -->
             <p class="feature-text d-none d-md-block">
-              Once you approve the channels, Visor becomes their own place to watch. They can enjoy videos from the creators they love—all from their iPhone or iPad, <b>ad-free</b> and with <b>no Shorts</b>.
+              Once you approve channels, Visor becomes their one place to watch, with fresh videos from the creators they love—all from their iPhone or iPad, <b>ad-free</b> and with <b>no Shorts</b>.
             </p>
 
             <!-- Mobile copy -->
             <p class="feature-text d-md-none">
-              Their own place to browse and watch—filled only with channels you’ve approved.
+              Fresh videos from the creators they love. Ad-free, with no Shorts, and only from channels you approve.
             </p>
+
           </div>
         </div>
 
@@ -211,10 +223,12 @@
   <section class="feature-section container-fluid px-3 px-md-5">
     <div class="row align-items-center justify-content-center g-4">
 
-      <!-- Copy -->
-      <div class="col-12 col-md-4 d-flex justify-content-end">
+      <!-- Copy: second on mobile, first on desktop -->
+      <div class="col-12 col-md-4 d-flex justify-content-end order-2 order-md-1">
         <div class="feature-copy feature-copy-left">
-          <div class="feature-label">
+
+          <!-- Desktop label -->
+          <div class="feature-label d-none d-md-block">
             Week in Review
           </div>
 
@@ -226,14 +240,17 @@
             Every week, Visor gives you a simple recap of their YouTube activity—what they watched and for how long they watched.
           </p>
 
-          <small class="d-block mt-2 text-muted">
-            A little insight goes a long way.
-          </small>
         </div>
       </div>
 
-      <!-- Week in Review GIF -->
-      <div class="col-12 col-md-4 text-center">
+      <!-- GIF: first on mobile, second on desktop -->
+      <div class="col-12 col-md-4 text-center order-1 order-md-2">
+
+        <!-- Mobile label -->
+        <div class="feature-label d-block d-md-none">
+          Week in Review
+        </div>
+
         <div class="gif-player" data-duration="3000">
           <img
             src="assets/weekinreview-preview.webp"
@@ -251,6 +268,7 @@
         <div class="small text-muted mt-2">
           A fresh recap every week.
         </div>
+
       </div>
 
     </div>
@@ -354,7 +372,7 @@
       </div>
 
       <p class="hero-paragraph">
-        Find channels that spark creativity, curiosity, and learning—from science and art to sports, gaming, music, and more. Kids get the freedom to explore YouTube. You get the peace of mind of knowing exactly where they can go.
+        Find channels that spark creativity, curiosity, and learning—from science and art to sports, gaming, music, and more. Kids get the freedom to explore. You get peace of mind of knowing exactly where they can go.
       </p>
 
     </div>
