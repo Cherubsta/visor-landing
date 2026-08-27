@@ -164,7 +164,7 @@ p {
 
 .hero-sticker {
   position: absolute;
-  width: 120px;
+  width: 124px;
   height: auto;
   right: 100px;
   bottom: -106px;
@@ -175,9 +175,9 @@ p {
 /* Mobile */
 @media (max-width: 576px) {
   .hero-sticker {
-    width: 96px;
+    width: 110px;
     right: 2px;
-    bottom: -93px;
+    bottom: -96px;
   }
 }
 
