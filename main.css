@@ -545,7 +545,7 @@ p {
   align-items: center;
   background-color: white;
   color: #FF6B6B;
-  border: 1px solid #FF6B6B; 
+  border: 2px solid #FF6B6B; 
   border-radius: 30px;
   padding: 8px 16px;
   font-size: 0.85rem;
@@ -584,43 +584,72 @@ p {
 .testimonials-grid {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.75rem;
 }
 
+/* Visible window */
 .testimonials-row {
-  overflow-x: auto;
-  overflow-y: visible;
-  scrollbar-width: none;
+  width: 100%;
+  overflow: hidden;
 }
 
-.testimonials-row::-webkit-scrollbar {
-  display: none;
-}
-
+/* Moving strip containing two identical groups */
 .testimonials-track {
   display: flex;
-  gap: 1rem;
-  padding: 0.75rem 0;
-  min-width: max-content;
+  width: max-content;
+  gap: 0;
+  will-change: transform;
+
+  animation-name: testimonialsMoveLeft;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
-.testimonials-track .graybackground-card {
+/* Different speeds keep the rows from looking synchronized */
+.testimonials-row-1 .testimonials-track {
+  animation-duration: 82s;
+}
+
+.testimonials-row-2 .testimonials-track {
+  animation-duration: 104s;
+}
+
+/* Each complete set of reviews */
+.testimonials-group {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 1rem;
+
+  /* Same spacing at the end of each duplicated group */
+  padding: 0.75rem 1rem 0.75rem 0;
+}
+
+.testimonials-group .graybackground-card {
   flex: 0 0 260px;
+  width: 260px;
   max-width: 260px;
+
   font-size: 0.85rem;
   line-height: 1.35;
-}
-
-/* Offset only the middle row */
-.testimonials-row:nth-child(2) .testimonials-track {
-  transform: translateX(80px);
 }
 
 .graybackground-card p:last-child {
   margin-bottom: 0;
 }
 
-/* Stars styling */
+/* Move continuously right-to-left */
+@keyframes testimonialsMoveLeft {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Stars */
 .stars {
   letter-spacing: 1.5px;
   font-size: 1rem;
@@ -632,23 +661,34 @@ p {
   margin-bottom: 0.25rem !important;
 }
 
+.graybackground-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
 /* Mobile */
 @media (max-width: 576px) {
-  .testimonials-track .graybackground-card {
+  .testimonials-group .graybackground-card {
     flex-basis: 220px;
+    width: 220px;
     max-width: 220px;
     padding: 14px;
     font-size: 0.85rem;
   }
 
-  .testimonials-row:nth-child(2) .testimonials-track {
-    transform: translateX(0);
+  .testimonials-row-1 .testimonials-track {
+    animation-duration: 72s;
+  }
+
+  .testimonials-row-2 .testimonials-track {
+    animation-duration: 92s;
   }
 }
 
-.graybackground-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+@media (prefers-reduced-motion: reduce) {
+  .testimonials-track {
+    animation: none;
+  }
 }
 
 .graybackground-img {
@@ -925,12 +965,15 @@ p {
   text-decoration: underline;
 }
 
+
+/* Interactive GIF player */
 .gif-player {
   position: relative;
   display: inline-block;
   overflow: hidden;
   border-radius: 16px;
   line-height: 0;
+  cursor: pointer;
 }
 
 .gif-player .demo-gif {
@@ -938,48 +981,65 @@ p {
   transform: translateY(2px);
 }
 
-.gif-play-btn {
+/* Full-image invisible button */
+.gif-trigger {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  inset: 0;
   z-index: 100;
 
   padding: 0;
   margin: 0;
   border: 0;
   background: transparent;
-  opacity: 0.7;
 
   cursor: pointer;
-
-  animation: playPulse 2s ease-in-out infinite;
 }
 
-.gif-play-icon {
+/* Shared visual cue */
+.gif-trigger-cue {
+  position: absolute;
   display: block;
-  width: 54px;
   height: auto;
+  animation: cuePulse 2s ease-in-out infinite;
 }
 
-.gif-play-btn:hover {
-  animation: none;
-  transform: translate(-50%, -50%) scale(1.08);
+/* Standard play icon */
+.gif-play-icon {
+  width: 54px;
+  top: 50%;
+  left: 50%;
+  opacity: 0.7;
+  transform: translate(-50%, -50%);
 }
 
-.gif-player.is-playing .gif-play-btn {
-  opacity: 0;
+/* "Try Me" sticker */
+.tryme-icon {
+  width: 80px;
+  top: 82%;
+  left: 40%;
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.22));
+}
+
+/* Hide cue while GIF is playing */
+.gif-player.is-playing .gif-trigger {
   pointer-events: none;
+}
+
+.gif-player.is-playing .gif-trigger-cue {
+  opacity: 0;
   animation: none;
 }
 
-@keyframes playPulse {
+/* Subtle invitation to interact */
+@keyframes cuePulse {
   0%, 100% {
-    transform: translate(-50%, -50%) scale(1);
+    scale: 1;
   }
 
   50% {
-    transform: translate(-50%, -50%) scale(1.08);
+    scale: 1.06;
   }
 }
 
