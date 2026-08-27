@@ -165,11 +165,67 @@ p {
 .hero-sticker {
   position: absolute;
   width: 124px;
-  height: auto;
   right: 100px;
   bottom: -106px;
-  transform: rotate(-5deg);
   z-index: 10;
+
+  /* Visible immediately */
+  transform: rotate(-5deg) scale(1);
+  opacity: 1;
+
+  /* Quick pop shortly after load */
+  animation: stickerPop 0.45s ease-out 0.35s;
+
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.hero-sticker img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* One-time shine across sticker */
+.sticker-shimmer {
+  position: absolute;
+  top: -30%;
+  left: -40%;
+  width: 8%;
+  height: 160%;
+
+  background: rgba(255, 255, 255, 0.45);
+  filter: blur(1px);
+
+  /* Angle of the reflection */
+  transform: rotate(-25deg);
+
+  /* Shine follows the pop */
+  animation: stickerShimmer 0.7s ease-in-out 0.55s forwards;
+}
+
+@keyframes stickerPop {
+  0% {
+    transform: rotate(-5deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(-5deg) scale(1.08);
+  }
+
+  100% {
+    transform: rotate(-5deg) scale(1);
+  }
+}
+
+@keyframes stickerShimmer {
+  from {
+    left: -40%;
+  }
+
+  to {
+    left: 140%;
+  }
 }
 
 /* Mobile */
@@ -178,6 +234,19 @@ p {
     width: 110px;
     right: 2px;
     bottom: -96px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .hero-sticker {
+    opacity: 1;
+    transform: rotate(-5deg);
+    animation: none;
+  }
+
+  .sticker-shimmer {
+    display: none;
   }
 }
 
