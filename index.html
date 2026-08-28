@@ -117,7 +117,7 @@
     </div>
 
     <!-- Channel Requests Section -->
-    <section class="feature-section container-fluid px-3 px-md-5">
+    <section class="feature-section container-fluid px-3 px-md-5 reveal">
       <div id="features"></div>
 
       <div class="row align-items-center justify-content-center g-4">
@@ -165,7 +165,7 @@
     </section>
 
     <!-- Kids Explore Section -->
-    <section class="feature-section container-fluid px-3 px-md-5">
+    <section class="feature-section container-fluid px-3 px-md-5 reveal">
       <div class="row align-items-center justify-content-center g-4">
 
         <!-- Image -->
@@ -198,10 +198,11 @@
 
       </div>
     </section>
+
   </section>
 
   <!-- Week in Review Section -->
-  <section class="feature-section container-fluid px-3 px-md-5">
+  <section class="feature-section container-fluid px-3 px-md-5 reveal">
     <div class="row align-items-center justify-content-center g-4">
 
       <!-- Copy: second on mobile, first on desktop -->
@@ -262,7 +263,7 @@
   </section>
 
   <!-- Screentime Section -->
-  <section class="mb-5">
+  <section class="mb-5 reveal">
     <div class="container-fluid px-3 px-md-5">
       <div class="content-wrapper">
         <div class="row g-4">
@@ -297,7 +298,7 @@
   </section>   
 
   <!-- Categories Section -->
-  <section class="top-margin-section py-5">
+  <section class="top-margin-section py-5 reveal">
     <div class="container text-center">
 
       <!-- Section Title -->
@@ -366,7 +367,7 @@
   </section>
 
   <!-- Testimonials Section -->
-  <section class="graybackground-section py-5">
+  <section class="graybackground-section py-5 reveal">
     <div class="container">
       <h2 class="text-center mb-4">
         Loved by families!
@@ -577,7 +578,7 @@
   </section>
 
   <!-- Bottom CTA -->
-  <section class="top-margin-section py-5" id="download">
+  <section class="top-margin-section py-5 reveal" id="download">
     <div class="container text-center mb-4">
 
       <div class="image-wrapper center mt-5">
@@ -668,6 +669,24 @@
           player.classList.remove('is-playing');
         }, duration);
       });
+    });
+  </script>
+
+  <!-- Fade in observer -->
+  <script>
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.20
+    });
+
+    document.querySelectorAll('.reveal').forEach(element => {
+      revealObserver.observe(element);
     });
   </script>
 

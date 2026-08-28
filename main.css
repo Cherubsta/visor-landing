@@ -1034,6 +1034,12 @@ p {
   text-decoration: underline;
 }
 
+/* Slightly larger and stacked on mobile */
+@media (max-width: 576px) {
+  .blog-nav-link {
+    font-size: 1.05rem;
+  }
+}
 
 /* Interactive GIF player */
 .gif-player {
@@ -1112,9 +1118,23 @@ p {
   }
 }
 
-/* Slightly larger and stacked on mobile */
-@media (max-width: 576px) {
-  .blog-nav-link {
-    font-size: 1.05rem;
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
