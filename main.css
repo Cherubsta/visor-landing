@@ -115,7 +115,9 @@ p {
   margin-bottom: 20px;
   line-height: 1.2;
 }
-
+.hero-title-wrap {
+  position: relative;
+}
 .hero-subtitle {
   font-size: 1.7rem;
   color: #575757;
@@ -165,7 +167,7 @@ p {
 .hero-sticker {
   position: absolute;
   width: 124px;
-  right: 100px;
+  right: 110px;
   bottom: -106px;
   z-index: 10;
 
@@ -232,7 +234,7 @@ p {
 @media (max-width: 576px) {
   .hero-sticker {
     width: 110px;
-    right: 2px;
+    right: -15px;
     bottom: -96px;
   }
 }
